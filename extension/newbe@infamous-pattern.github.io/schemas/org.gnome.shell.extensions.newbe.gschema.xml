@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema
+      id="org.gnome.shell.extensions.newbe"
+      path="/org/gnome/shell/extensions/newbe/">
+
+    <key name="show-panel-label" type="b">
+      <default>true</default>
+      <summary>Show NewBe panel label</summary>
+      <description>
+        Controls whether the initial NewBe panel indicator is visible.
+      </description>
+    </key>
+
+    <key name="motion-profile" type="s">
+      <default>'fluid'</default>
+      <summary>NewBe motion profile</summary>
+      <description>
+        Selects the preferred NewBe motion profile.
+      </description>
+    </key>
+
+  </schema>
+</schemalist>
