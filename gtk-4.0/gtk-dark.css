@@ -1,11 +1,7 @@
 /*
- * NewBe GTK 4 - Light
+ * NewBe GTK 4 - Dark
  *
- * Modern Wayland-first visual language inspired by the evolution of BeOS.
- *
- * Interaction model:
- *   neutral / raised = idle
- *   gold / inset     = active or selected
+ * Dark NewBe uses warm graphite rather than pure black.
  */
 
 /* =========================================================
@@ -13,49 +9,46 @@
  * ========================================================= */
 
 :root {
-    --newbe-gold: #d6a928;
+    --newbe-gold: #c59a22;
     --newbe-gold-bright: #e4be45;
-    --newbe-gold-dark: #a77a12;
+    --newbe-gold-dark: #8f6810;
 
-    --newbe-bg: #e8e6df;
-    --newbe-bg-secondary: #d8d6cf;
-    --newbe-surface: #f3f1ea;
+    --newbe-bg: #272927;
+    --newbe-bg-secondary: #343633;
+    --newbe-surface: #41433f;
 
-    --newbe-text: #20211f;
-    --newbe-text-secondary: #595b57;
+    --newbe-text: #f0eee7;
+    --newbe-text-secondary: #bbbdb7;
 
-    --newbe-border: #8e908a;
-    --newbe-border-dark: #60625e;
+    --newbe-border: #666963;
+    --newbe-border-dark: #171816;
 
-    /* libadwaita accent integration */
-    --accent-bg-color: #d6a928;
+    --accent-bg-color: #c59a22;
     --accent-fg-color: #20211f;
-    --accent-color: #a77a12;
+    --accent-color: #e4be45;
 }
 
-/* GTK / Adwaita compatibility colors */
-
-@define-color newbe_gold #d6a928;
+@define-color newbe_gold #c59a22;
 @define-color newbe_gold_bright #e4be45;
-@define-color newbe_gold_dark #a77a12;
+@define-color newbe_gold_dark #8f6810;
 
-@define-color newbe_bg #e8e6df;
-@define-color newbe_bg_secondary #d8d6cf;
-@define-color newbe_surface #f3f1ea;
+@define-color newbe_bg #272927;
+@define-color newbe_bg_secondary #343633;
+@define-color newbe_surface #41433f;
 
-@define-color newbe_text #20211f;
-@define-color newbe_text_secondary #595b57;
+@define-color newbe_text #f0eee7;
+@define-color newbe_text_secondary #bbbdb7;
 
-@define-color newbe_border #8e908a;
-@define-color newbe_border_dark #60625e;
+@define-color newbe_border #666963;
+@define-color newbe_border_dark #171816;
 
-@define-color accent_bg_color #d6a928;
+@define-color accent_bg_color #c59a22;
 @define-color accent_fg_color #20211f;
-@define-color accent_color #a77a12;
+@define-color accent_color #e4be45;
 
-@define-color theme_selected_bg_color #d6a928;
+@define-color theme_selected_bg_color #c59a22;
 @define-color theme_selected_fg_color #20211f;
-@define-color theme_unfocused_selected_bg_color #b89226;
+@define-color theme_unfocused_selected_bg_color #8f711c;
 @define-color theme_unfocused_selected_fg_color #20211f;
 
 
@@ -74,7 +67,7 @@ textview text,
 treeview,
 listview,
 columnview {
-    background-color: #ffffff;
+    background-color: #1f211f;
     color: @newbe_text;
 }
 
@@ -90,17 +83,17 @@ headerbar {
     color: @newbe_text;
 
     border-top: 3px solid @newbe_gold;
-    border-bottom: 1px solid @newbe_border;
+    border-bottom: 1px solid #191a18;
 
     border-radius: 5px 5px 0 0;
 
     box-shadow:
-        inset 0 1px rgba(255, 255, 255, 0.52),
-        0 1px 3px rgba(0, 0, 0, 0.14);
+        inset 0 1px rgba(255, 255, 255, 0.07),
+        0 2px 5px rgba(0, 0, 0, 0.35);
 }
 
 headerbar:backdrop {
-    border-top-color: #aaa79d;
+    border-top-color: #646660;
     color: @newbe_text_secondary;
 }
 
@@ -117,43 +110,43 @@ button {
     background-color: @newbe_surface;
     color: @newbe_text;
 
-    border-top: 1px solid rgba(255, 255, 255, 0.82);
-    border-left: 1px solid rgba(255, 255, 255, 0.58);
-    border-right: 1px solid @newbe_border;
-    border-bottom: 1px solid @newbe_border;
+    border-top: 1px solid #73766f;
+    border-left: 1px solid #676a64;
+    border-right: 1px solid @newbe_border_dark;
+    border-bottom: 1px solid @newbe_border_dark;
 
     border-radius: 5px;
 
     padding: 5px 10px;
 
     box-shadow:
-        inset 0 1px rgba(255, 255, 255, 0.36),
-        0 1px 2px rgba(0, 0, 0, 0.14);
+        inset 0 1px rgba(255, 255, 255, 0.06),
+        0 1px 2px rgba(0, 0, 0, 0.42);
 }
 
 button:hover {
-    background-color: #faf8f1;
+    background-color: #494b47;
 
-    border-right-color: @newbe_gold_dark;
-    border-bottom-color: @newbe_gold_dark;
+    border-right-color: @newbe_gold;
+    border-bottom-color: @newbe_gold;
 }
 
 button:active,
 button:checked {
-    background-color: #dfddd6;
+    background-color: #343633;
 
-    border-top-color: @newbe_border;
-    border-left-color: @newbe_border;
-    border-right-color: rgba(255, 255, 255, 0.58);
-    border-bottom-color: rgba(255, 255, 255, 0.74);
+    border-top-color: @newbe_border_dark;
+    border-left-color: @newbe_border_dark;
+    border-right-color: #666963;
+    border-bottom-color: #666963;
 
     box-shadow:
-        inset 0 2px 3px rgba(0, 0, 0, 0.18);
+        inset 0 2px 3px rgba(0, 0, 0, 0.38);
 }
 
 button.toggle:checked {
     background-color: @newbe_gold;
-    color: @newbe_text;
+    color: #20211f;
 
     border-top-color: @newbe_gold_dark;
     border-left-color: @newbe_gold_dark;
@@ -161,7 +154,7 @@ button.toggle:checked {
     border-bottom-color: @newbe_gold_bright;
 
     box-shadow:
-        inset 0 2px 3px rgba(0, 0, 0, 0.22);
+        inset 0 2px 3px rgba(0, 0, 0, 0.34);
 }
 
 button.toggle:checked:hover {
@@ -170,28 +163,28 @@ button.toggle:checked:hover {
 
 
 /* =========================================================
- * Entries and text input
+ * Entries
  * ========================================================= */
 
 entry {
-    background-color: #ffffff;
+    background-color: #1f211f;
     color: @newbe_text;
 
-    border-top: 1px solid @newbe_border_dark;
-    border-left: 1px solid @newbe_border_dark;
-    border-right: 1px solid rgba(255, 255, 255, 0.78);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.78);
+    border-top: 1px solid #111210;
+    border-left: 1px solid #111210;
+    border-right: 1px solid #666963;
+    border-bottom: 1px solid #666963;
 
     border-radius: 4px;
 
     padding: 4px 6px;
 
     box-shadow:
-        inset 0 1px 2px rgba(0, 0, 0, 0.11);
+        inset 0 1px 3px rgba(0, 0, 0, 0.42);
 }
 
 entry:focus-within {
-    border-color: @newbe_gold_dark;
+    border-color: @newbe_gold;
 }
 
 
@@ -200,7 +193,7 @@ entry:focus-within {
  * ========================================================= */
 
 *:focus-visible {
-    outline-color: @newbe_gold;
+    outline-color: @newbe_gold_bright;
     outline-width: 2px;
     outline-offset: 1px;
 }
@@ -210,12 +203,12 @@ button:focus-visible,
 checkbutton:focus-visible,
 switch:focus-visible,
 scale:focus-visible {
-    outline-color: @newbe_gold;
+    outline-color: @newbe_gold_bright;
 }
 
 
 /* =========================================================
- * Checkboxes and radio buttons
+ * Checkboxes and radios
  * ========================================================= */
 
 checkbutton check,
@@ -223,15 +216,15 @@ checkbutton radio {
     min-width: 16px;
     min-height: 16px;
 
-    background-color: @newbe_surface;
+    background-color: #30322f;
 
-    border-top: 1px solid @newbe_border_dark;
-    border-left: 1px solid @newbe_border_dark;
-    border-right: 1px solid #f5f3ed;
-    border-bottom: 1px solid #f5f3ed;
+    border-top: 1px solid #171816;
+    border-left: 1px solid #171816;
+    border-right: 1px solid #666963;
+    border-bottom: 1px solid #666963;
 
     box-shadow:
-        inset 0 1px 2px rgba(0, 0, 0, 0.13);
+        inset 0 1px 2px rgba(0, 0, 0, 0.38);
 }
 
 checkbutton check {
@@ -244,7 +237,7 @@ checkbutton radio {
 
 checkbutton:hover check,
 checkbutton:hover radio {
-    border-color: @newbe_gold_dark;
+    border-color: @newbe_gold;
 }
 
 checkbutton:checked check,
@@ -252,12 +245,12 @@ checkbutton:checked radio,
 checkbutton check:checked,
 checkbutton radio:checked {
     background-color: @newbe_gold;
-    color: @newbe_text;
+    color: #20211f;
 
     border-color: @newbe_gold_dark;
 
     box-shadow:
-        inset 0 2px 3px rgba(0, 0, 0, 0.20);
+        inset 0 2px 3px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -269,18 +262,18 @@ switch {
     min-width: 40px;
     min-height: 22px;
 
-    background-color: @newbe_bg_secondary;
+    background-color: #30322f;
 
-    border: 1px solid @newbe_border_dark;
+    border: 1px solid #171816;
     border-radius: 11px;
 
     box-shadow:
-        inset 0 1px 3px rgba(0, 0, 0, 0.18);
+        inset 0 1px 3px rgba(0, 0, 0, 0.42);
 }
 
 switch:checked {
     background-color: @newbe_gold;
-    color: @newbe_text;
+    color: #20211f;
 
     border-color: @newbe_gold_dark;
 }
@@ -293,32 +286,32 @@ switch slider {
 
     background-color: @newbe_surface;
 
-    border-top: 1px solid #ffffff;
-    border-left: 1px solid #ffffff;
-    border-right: 1px solid @newbe_border_dark;
-    border-bottom: 1px solid @newbe_border_dark;
+    border-top: 1px solid #73766f;
+    border-left: 1px solid #73766f;
+    border-right: 1px solid #171816;
+    border-bottom: 1px solid #171816;
 
     border-radius: 9px;
 
     box-shadow:
-        0 1px 2px rgba(0, 0, 0, 0.25);
+        0 1px 2px rgba(0, 0, 0, 0.46);
 }
 
 
 /* =========================================================
- * Scales / sliders
+ * Scales
  * ========================================================= */
 
 scale trough {
     min-height: 6px;
 
-    background-color: @newbe_bg_secondary;
+    background-color: #30322f;
 
-    border: 1px solid @newbe_border;
+    border: 1px solid #171816;
     border-radius: 4px;
 
     box-shadow:
-        inset 0 1px 2px rgba(0, 0, 0, 0.16);
+        inset 0 1px 2px rgba(0, 0, 0, 0.42);
 }
 
 scale highlight,
@@ -334,19 +327,19 @@ scale slider {
 
     background-color: @newbe_surface;
 
-    border-top: 1px solid #ffffff;
-    border-left: 1px solid #ffffff;
-    border-right: 1px solid @newbe_border_dark;
-    border-bottom: 1px solid @newbe_border_dark;
+    border-top: 1px solid #73766f;
+    border-left: 1px solid #73766f;
+    border-right: 1px solid #171816;
+    border-bottom: 1px solid #171816;
 
     border-radius: 8px;
 
     box-shadow:
-        0 1px 2px rgba(0, 0, 0, 0.23);
+        0 1px 2px rgba(0, 0, 0, 0.46);
 }
 
 scale slider:hover {
-    border-color: @newbe_gold_dark;
+    border-color: @newbe_gold;
 }
 
 
@@ -355,19 +348,19 @@ scale slider:hover {
  * ========================================================= */
 
 progressbar trough {
-    background-color: @newbe_bg_secondary;
+    background-color: #30322f;
 
-    border: 1px solid @newbe_border;
+    border: 1px solid #171816;
     border-radius: 4px;
 
     box-shadow:
-        inset 0 1px 2px rgba(0, 0, 0, 0.12);
+        inset 0 1px 2px rgba(0, 0, 0, 0.38);
 }
 
 progressbar progress,
 levelbar block.filled {
     background-color: @newbe_gold;
-    color: @newbe_text;
+    color: #20211f;
 
     border-color: @newbe_gold_dark;
     border-radius: 3px;
@@ -381,7 +374,7 @@ levelbar block.filled {
 selection,
 *:selected {
     background-color: @newbe_gold;
-    color: @newbe_text;
+    color: #20211f;
 }
 
 treeview:selected,
@@ -389,7 +382,7 @@ columnview row:selected,
 listview row:selected,
 gridview child:selected {
     background-color: @newbe_gold;
-    color: @newbe_text;
+    color: #20211f;
 }
 
 
@@ -400,7 +393,7 @@ gridview child:selected {
 notebook > header {
     background-color: @newbe_bg_secondary;
 
-    border-bottom: 1px solid @newbe_border;
+    border-bottom: 1px solid #191a18;
 }
 
 notebook > header > tabs > tab {
@@ -414,7 +407,7 @@ notebook > header > tabs > tab {
 }
 
 notebook > header > tabs > tab:hover {
-    background-color: rgba(214, 169, 40, 0.12);
+    background-color: rgba(197, 154, 34, 0.12);
 }
 
 notebook > header > tabs > tab:checked {
@@ -435,21 +428,21 @@ notebook > header > tabs > tab:checked {
 
 link,
 link:visited {
-    color: @newbe_gold_dark;
+    color: @newbe_gold_bright;
 }
 
 link:hover {
-    color: @newbe_gold;
+    color: #f1cf65;
 }
 
 
 /* =========================================================
- * Suggested / accent actions
+ * Suggested actions
  * ========================================================= */
 
 button.suggested-action {
     background-color: @newbe_gold;
-    color: @newbe_text;
+    color: #20211f;
 
     border-color: @newbe_gold_dark;
 }
@@ -464,5 +457,5 @@ button.suggested-action:hover {
  * ========================================================= */
 
 separator {
-    background-color: rgba(96, 98, 94, 0.35);
+    background-color: rgba(187, 189, 183, 0.20);
 }

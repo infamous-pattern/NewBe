@@ -53,14 +53,24 @@ done
 printf 'NewBe installer\n'
 printf 'Project: %s\n\n' "$PROJECT_ROOT"
 
-run mkdir -p "$THEME_ROOT/NewBe"
-run mkdir -p "$ICON_ROOT/NewBe"
+if ! "$DRY_RUN"; then
+    "$PROJECT_ROOT/scripts/build-themes.sh"
+fi
 
-run cp -R "$PROJECT_ROOT/gtk-3.0" "$THEME_ROOT/NewBe/"
-run cp -R "$PROJECT_ROOT/gtk-4.0" "$THEME_ROOT/NewBe/"
+run mkdir -p "$THEME_ROOT"
+run mkdir -p "$ICON_ROOT"
 
-run cp -R "$PROJECT_ROOT/icons/NewBe/." "$ICON_ROOT/NewBe/"
+run rm -rf -- "$THEME_ROOT/NewBe"
+run rm -rf -- "$THEME_ROOT/NewBe-Dark"
+
+run cp -R "$PROJECT_ROOT/themes/NewBe" "$THEME_ROOT/"
+run cp -R "$PROJECT_ROOT/themes/NewBe-Dark" "$THEME_ROOT/"
+
+run rm -rf -- "$ICON_ROOT/NewBe"
+run cp -R "$PROJECT_ROOT/icons/NewBe" "$ICON_ROOT/"
 
 printf '\nNewBe installation complete.\n'
 printf 'No GNOME settings were modified automatically.\n'
-printf 'Use GNOME Tweaks to select installed components.\n'
+printf '\nAvailable themes:\n'
+printf '  NewBe\n'
+printf '  NewBe-Dark\n'

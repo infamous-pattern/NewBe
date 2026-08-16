@@ -1,0 +1,248 @@
+@define-color newbe_gold #c59a22;
+@define-color newbe_gold_bright #d6a928;
+@define-color newbe_gold_dark #8f6810;
+
+@define-color newbe_bg #272927;
+@define-color newbe_bg_secondary #343633;
+@define-color newbe_surface #41433f;
+
+@define-color newbe_text #f0eee7;
+@define-color newbe_text_secondary #bbbdb7;
+
+@define-color newbe_border #666963;
+
+window,
+.background {
+    background-color: @newbe_bg;
+    color: @newbe_text;
+}
+
+headerbar,
+.titlebar {
+    min-height: 34px;
+
+    background-color: @newbe_surface;
+    color: @newbe_text;
+
+    border: none;
+    border-top: 3px solid @newbe_gold;
+    border-bottom: 1px solid #191a18;
+
+    border-radius: 5px 5px 0 0;
+
+    box-shadow:
+        inset 0 1px rgba(255, 255, 255, 0.07),
+        0 2px 5px rgba(0, 0, 0, 0.35);
+}
+
+headerbar:backdrop,
+.titlebar:backdrop {
+    border-top-color: #646660;
+    color: @newbe_text_secondary;
+}
+
+headerbar .title {
+    padding: 2px 9px;
+
+    background-color: alpha(@newbe_gold, 0.18);
+
+    border-radius: 5px;
+
+    font-weight: 600;
+}
+
+button {
+    background-color: @newbe_surface;
+    color: @newbe_text;
+
+    border: 1px solid @newbe_border;
+    border-radius: 5px;
+
+    padding: 5px 10px;
+}
+
+button:hover {
+    border-color: @newbe_gold;
+}
+
+entry {
+    background-color: #1f211f;
+    color: @newbe_text;
+
+    border: 1px solid @newbe_border;
+    border-radius: 4px;
+
+    padding: 4px 6px;
+}
+
+entry:focus {
+    border-color: @newbe_gold;
+}
+
+selection,
+*:selected {
+    background-color: @newbe_gold;
+    color: #20211f;
+}
+
+/* Persistent GtkToggleButton state */
+
+button.toggle:checked {
+    background-color: @newbe_gold;
+    color: #20211f;
+
+    border-top-color: @newbe_gold_dark;
+    border-left-color: @newbe_gold_dark;
+    border-right-color: #dac253;
+    border-bottom-color: #dac253;
+
+    box-shadow:
+        inset 0 2px 3px rgba(0, 0, 0, 0.34);
+}
+
+button.toggle:checked:hover {
+    background-color: @newbe_gold_bright;
+}
+
+button.toggle:checked:backdrop {
+    background-color: shade(@newbe_gold, 0.80);
+}
+
+/*
+ * Stateful controls - dark
+ */
+
+check,
+radio {
+    min-width: 16px;
+    min-height: 16px;
+
+    background-color: #30322f;
+
+    border-top: 1px solid #171816;
+    border-left: 1px solid #171816;
+    border-right: 1px solid #666963;
+    border-bottom: 1px solid #666963;
+
+    box-shadow:
+        inset 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+check {
+    border-radius: 4px;
+}
+
+radio {
+    border-radius: 50%;
+}
+
+check:checked,
+radio:checked {
+    background-color: @newbe_gold;
+    color: #20211f;
+
+    border-color: @newbe_gold_dark;
+}
+
+switch {
+    min-width: 38px;
+    min-height: 20px;
+
+    background-color: #30322f;
+
+    border: 1px solid #171816;
+    border-radius: 10px;
+
+    box-shadow:
+        inset 0 1px 3px rgba(0, 0, 0, 0.40);
+}
+
+switch:checked {
+    background-color: @newbe_gold;
+    border-color: @newbe_gold_dark;
+}
+
+switch slider {
+    min-width: 16px;
+    min-height: 16px;
+
+    margin: 1px;
+
+    background-color: @newbe_surface;
+
+    border-top: 1px solid #73766f;
+    border-left: 1px solid #73766f;
+    border-right: 1px solid #171816;
+    border-bottom: 1px solid #171816;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+scale trough {
+    min-height: 6px;
+
+    background-color: #30322f;
+
+    border: 1px solid #171816;
+    border-radius: 4px;
+
+    box-shadow:
+        inset 0 1px 2px rgba(0, 0, 0, 0.40);
+}
+
+scale highlight {
+    background-color: @newbe_gold;
+
+    border-radius: 4px;
+}
+
+scale slider {
+    min-width: 16px;
+    min-height: 16px;
+
+    background-color: @newbe_surface;
+
+    border-top: 1px solid #73766f;
+    border-left: 1px solid #73766f;
+    border-right: 1px solid #171816;
+    border-bottom: 1px solid #171816;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+notebook > header {
+    background-color: @newbe_bg_secondary;
+
+    border-bottom: 1px solid #191a18;
+}
+
+notebook > header > tabs > tab {
+    padding: 6px 12px;
+
+    background-color: transparent;
+
+    border-radius: 5px 5px 0 0;
+
+    color: @newbe_text_secondary;
+}
+
+notebook > header > tabs > tab:hover {
+    background-color: alpha(@newbe_gold, 0.10);
+}
+
+notebook > header > tabs > tab:checked {
+    background-color: @newbe_surface;
+    color: @newbe_text;
+
+    border-top: 3px solid @newbe_gold;
+    border-left: 1px solid @newbe_border;
+    border-right: 1px solid @newbe_border;
+
+    font-weight: 600;
+}

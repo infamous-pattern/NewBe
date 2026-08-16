@@ -1,6 +1,7 @@
 /*
  * NewBe GNOME Shell Extension
- * Panel identity - early development
+ *
+ * Modern Be-inspired panel identity.
  */
 
 .newbe-panel-button {
@@ -8,43 +9,74 @@
     -minimum-hpadding: 2px;
 }
 
+/*
+ * The outer form deliberately references the old Be title-tab
+ * silhouette without attempting to reproduce it literally.
+ */
+
 .newbe-panel-content {
     spacing: 6px;
 
     margin: 2px 3px;
-    padding: 1px 8px 1px 3px;
+    padding: 1px 9px 1px 3px;
 
     border-radius: 4px;
 
-    background-color: rgba(214, 169, 40, 0.96);
-
-    border-top: 1px solid rgba(255, 241, 176, 0.70);
-    border-left: 1px solid rgba(255, 236, 151, 0.55);
-    border-right: 1px solid rgba(102, 72, 5, 0.48);
-    border-bottom: 1px solid rgba(84, 59, 3, 0.58);
-
-    box-shadow:
-        0 1px 2px rgba(0, 0, 0, 0.25);
+    transition-duration: 120ms;
 }
 
-.newbe-panel-button:hover .newbe-panel-content {
-    background-color: rgba(228, 190, 69, 0.98);
+/* Light */
+
+.newbe-light .newbe-panel-content {
+    background-color: #d6a928;
+
+    border-top: 1px solid #f0d573;
+    border-left: 1px solid #e8c858;
+    border-right: 1px solid #936b10;
+    border-bottom: 1px solid #7c590c;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24);
 }
+
+.newbe-light:hover .newbe-panel-content {
+    background-color: #e4be45;
+}
+
+/* Dark */
+
+.newbe-dark .newbe-panel-content {
+    background-color: #c59a22;
+
+    border-top: 1px solid #e6c85d;
+    border-left: 1px solid #d9b844;
+    border-right: 1px solid #6e5315;
+    border-bottom: 1px solid #58420f;
+
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.46);
+}
+
+.newbe-dark:hover .newbe-panel-content {
+    background-color: #d6a928;
+}
+
+/* Pressed */
 
 .newbe-panel-button:active .newbe-panel-content,
 .newbe-panel-button:checked .newbe-panel-content {
-    background-color: rgba(167, 122, 18, 0.98);
+    background-color: #a77a12;
 }
+
+/* NewBe B mark */
 
 .newbe-panel-mark {
     min-width: 22px;
 
     padding: 0 2px;
 
-    color: #f7e8a8;
-
     background-color: #252722;
+    color: #f4dc79;
 
+    border: 1px solid rgba(0, 0, 0, 0.45);
     border-radius: 3px;
 
     font-weight: 700;
@@ -52,6 +84,8 @@
 
     text-align: center;
 }
+
+/* Label */
 
 .newbe-panel-label {
     color: #20211f;

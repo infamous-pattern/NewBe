@@ -48,10 +48,9 @@ while (($#)); do
     shift
 done
 
-printf 'NewBe uninstaller\n\n'
-
 run rm -rf -- "$THEME_ROOT/NewBe"
+run rm -rf -- "$THEME_ROOT/NewBe-Dark"
 run rm -rf -- "$ICON_ROOT/NewBe"
 
-printf '\nNewBe user files removed.\n'
+printf 'NewBe user files removed.\n'
 printf 'GNOME settings were not changed.\n'

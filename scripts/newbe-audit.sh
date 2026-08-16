@@ -2,26 +2,36 @@
 
 set -euo pipefail
 
-THEME_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/themes/NewBe"
-ICON_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/icons/NewBe"
+DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 
-printf 'NewBe Installation Audit\n'
-printf '========================\n\n'
-
-check_path() {
+check() {
     local label="$1"
     local path="$2"
 
     if [[ -e "$path" ]]; then
-        printf '[OK]      %-18s %s\n' "$label" "$path"
+        printf '[OK]      %-24s %s\n' "$label" "$path"
     else
-        printf '[MISSING] %-18s %s\n' "$label" "$path"
+        printf '[MISSING] %-24s %s\n' "$label" "$path"
     fi
 }
 
-check_path "GTK 3 theme" "$THEME_DIR/gtk-3.0/gtk.css"
-check_path "GTK 4 theme" "$THEME_DIR/gtk-4.0/gtk.css"
-check_path "Icon theme" "$ICON_DIR/index.theme"
+printf 'NewBe Installation Audit\n'
+printf '========================\n\n'
+
+check "NewBe GTK3" \
+    "$DATA_HOME/themes/NewBe/gtk-3.0/gtk.css"
+
+check "NewBe GTK4" \
+    "$DATA_HOME/themes/NewBe/gtk-4.0/gtk.css"
+
+check "NewBe-Dark GTK3" \
+    "$DATA_HOME/themes/NewBe-Dark/gtk-3.0/gtk.css"
+
+check "NewBe-Dark GTK4" \
+    "$DATA_HOME/themes/NewBe-Dark/gtk-4.0/gtk.css"
+
+check "NewBe icons" \
+    "$DATA_HOME/icons/NewBe/index.theme"
 
 printf '\nSecurity posture\n'
 printf '----------------\n'

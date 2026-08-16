@@ -9,6 +9,7 @@ import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 export default class NewBeExtension extends Extension {
     enable() {
         this._settings = this.getSettings();
+        this._shellSettings = St.Settings.get();
 
         this._indicator = new PanelMenu.Button(
             0.0,
@@ -37,17 +38,19 @@ export default class NewBeExtension extends Extension {
 
         box.add_child(mark);
         box.add_child(label);
-
         this._indicator.add_child(box);
 
-        this._motionItem = new PopupMenu.PopupMenuItem(
-            '',
-            {
-                reactive: false,
-                can_focus: false,
-            }
-        );
+        this._appearanceItem = new PopupMenu.PopupMenuItem('', {
+            reactive: false,
+            can_focus: false,
+        });
 
+        this._motionItem = new PopupMenu.PopupMenuItem('', {
+            reactive: false,
+            can_focus: false,
+        });
+
+        this._indicator.menu.addMenuItem(this._appearanceItem);
         this._indicator.menu.addMenuItem(this._motionItem);
 
         this._indicator.menu.addMenuItem(
@@ -71,15 +74,21 @@ export default class NewBeExtension extends Extension {
                 'changed::show-panel-label',
                 () => this._syncIndicator()
             ),
-
             this._settings.connect(
                 'changed::motion-profile',
                 () => this._syncMotionProfile()
             ),
         ];
 
+        this._colorSchemeChangedId =
+            this._shellSettings.connect(
+                'notify::color-scheme',
+                () => this._syncAppearance()
+            );
+
         this._syncIndicator();
         this._syncMotionProfile();
+        this._syncAppearance();
     }
 
     disable() {
@@ -88,12 +97,21 @@ export default class NewBeExtension extends Extension {
                 this._settings.disconnect(id);
         }
 
+        if (this._shellSettings && this._colorSchemeChangedId) {
+            this._shellSettings.disconnect(
+                this._colorSchemeChangedId
+            );
+        }
+
         this._settingsChangedIds = [];
+        this._colorSchemeChangedId = null;
 
         this._indicator?.destroy();
         this._indicator = null;
 
+        this._appearanceItem = null;
         this._motionItem = null;
+        this._shellSettings = null;
         this._settings = null;
     }
 
@@ -118,10 +136,32 @@ export default class NewBeExtension extends Extension {
             fluid: 'Fluid',
         };
 
-        const name =
-            displayNames[profile] ?? 'Fluid';
-
         this._motionItem.label.text =
-            `Motion: ${name}`;
+            `Motion: ${displayNames[profile] ?? 'Fluid'}`;
+    }
+
+    _syncAppearance() {
+        if (!this._indicator || !this._shellSettings)
+            return;
+
+        const scheme = this._shellSettings.color_scheme;
+
+        /*
+         * St.SystemColorScheme:
+         * 0 = DEFAULT
+         * 1 = PREFER_DARK
+         * 2 = PREFER_LIGHT
+         */
+        const dark = scheme === 1;
+
+        this._indicator.remove_style_class_name('newbe-light');
+        this._indicator.remove_style_class_name('newbe-dark');
+
+        this._indicator.add_style_class_name(
+            dark ? 'newbe-dark' : 'newbe-light'
+        );
+
+        this._appearanceItem.label.text =
+            `Appearance: ${dark ? 'Dark' : 'Light'}`;
     }
 }

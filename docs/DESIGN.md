@@ -127,3 +127,33 @@ Recommended:
 - IBM Plex Mono
 
 Typography remains user-configurable through GNOME Tweaks.
+
+## Appearance modes
+
+NewBe supports both light and dark desktop appearances.
+
+### Light
+
+The light appearance uses:
+
+- warm neutral gray surfaces
+- dark graphite text
+- restrained gold focus indicators
+- subtle dimensional highlights
+
+### Dark
+
+The dark appearance uses:
+
+- charcoal surfaces rather than absolute black
+- warm off-white typography
+- slightly subdued gold
+- stronger but restrained depth and shadow
+
+### System integration
+
+NewBe follows the GNOME system color-scheme preference.
+
+It should not require users to maintain an independent NewBe light/dark preference.
+
+The theme must remain usable when users modify fonts, cursors, icons, and other standard GNOME settings through GNOME Tweaks.
