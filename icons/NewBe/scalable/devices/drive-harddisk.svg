@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fafafa"/>
+      <stop offset=".28" stop-color="#babdb8"/>
+      <stop offset=".55" stop-color="#eeeeec"/>
+      <stop offset="1" stop-color="#888a85"/>
+    </linearGradient>
+    <linearGradient id="base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#454743"/>
+      <stop offset="1" stop-color="#181916"/>
+    </linearGradient>
+    <radialGradient id="platter">
+      <stop offset="0" stop-color="#fafafa"/>
+      <stop offset=".55" stop-color="#c7c9c5"/>
+      <stop offset="1" stop-color="#777a75"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-opacity=".28"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="30" y="34" width="196" height="163" rx="17"
+          fill="url(#metal)" stroke="#555752" stroke-width="5"/>
+
+    <circle cx="128" cy="113" r="62"
+            fill="url(#platter)" stroke="#777a75" stroke-width="5"/>
+    <circle cx="128" cy="113" r="24"
+            fill="#d6a928" stroke="#8b640e" stroke-width="4"/>
+    <circle cx="128" cy="113" r="8"
+            fill="#f3cf62"/>
+
+    <path d="M167 144l25-24 11 11-26 25-21 5z"
+          fill="#8e908a" stroke="#555752" stroke-width="3"/>
+
+    <rect x="30" y="181" width="196" height="45" rx="11"
+          fill="url(#base)" stroke="#11120f" stroke-width="5"/>
+
+    <circle cx="194" cy="204" r="7" fill="#d6a928"/>
+    <circle cx="194" cy="204" r="3" fill="#fff0a0"/>
+
+    <path d="M58 198v15M69 198v15M80 198v15M91 198v15"
+          stroke="#0b0c0a" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>
