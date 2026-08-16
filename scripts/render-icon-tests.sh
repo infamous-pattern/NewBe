@@ -21,6 +21,12 @@ icons=(
     "$PROJECT_ROOT/icons/NewBe/scalable/devices/drive-harddisk.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/places/trash-empty.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/devices/computer.svg"
+
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Nautilus.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Calculator.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Calendar.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Software.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.TextEditor.svg"
 )
 
 sizes=(

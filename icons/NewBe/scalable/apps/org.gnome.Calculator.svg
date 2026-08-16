@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5f5f3"/>
+      <stop offset=".38" stop-color="#b9bbb7"/>
+      <stop offset="1" stop-color="#777a75"/>
+    </linearGradient>
+    <linearGradient id="key" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#555752"/>
+      <stop offset="1" stop-color="#252723"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e4be45"/>
+      <stop offset="1" stop-color="#a77a12"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-opacity=".27"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="52" y="23" width="152" height="210" rx="18"
+          fill="url(#metal)" stroke="#555752" stroke-width="5"/>
+
+    <rect x="70" y="42" width="116" height="48" rx="7"
+          fill="#1c1e1b" stroke="#777a75" stroke-width="4"/>
+
+    <text x="176" y="74"
+          text-anchor="end"
+          font-family="monospace"
+          font-size="27"
+          fill="#f0eee7">12345</text>
+
+    <g stroke="#151613" stroke-width="3">
+      <rect x="72" y="107" width="36" height="31" rx="6" fill="url(#gold)"/>
+      <rect x="110" y="107" width="36" height="31" rx="6" fill="url(#key)"/>
+      <rect x="148" y="107" width="36" height="31" rx="6" fill="url(#key)"/>
+
+      <rect x="72" y="142" width="36" height="31" rx="6" fill="url(#key)"/>
+      <rect x="110" y="142" width="36" height="31" rx="6" fill="url(#key)"/>
+      <rect x="148" y="142" width="36" height="31" rx="6" fill="url(#key)"/>
+
+      <rect x="72" y="177" width="36" height="31" rx="6" fill="url(#key)"/>
+      <rect x="110" y="177" width="36" height="31" rx="6" fill="url(#key)"/>
+      <rect x="148" y="177" width="36" height="31" rx="6" fill="url(#gold)"/>
+    </g>
+
+    <g fill="#f0eee7" font-family="sans-serif" font-size="19"
+       text-anchor="middle" dominant-baseline="middle">
+      <text x="90" y="123">C</text>
+      <text x="128" y="123">+</text>
+      <text x="166" y="123">×</text>
+      <text x="90" y="158">6</text>
+      <text x="128" y="158">5</text>
+      <text x="166" y="158">+</text>
+      <text x="90" y="193">2</text>
+      <text x="128" y="193">−</text>
+      <text x="166" y="193">=</text>
+    </g>
+  </g>
+</svg>

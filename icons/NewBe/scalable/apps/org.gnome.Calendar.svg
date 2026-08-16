@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0c954"/>
+      <stop offset="1" stop-color="#ae7f13"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffef8"/>
+      <stop offset="1" stop-color="#ddd9cc"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-opacity=".24"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="32" y="44" width="192" height="184" rx="16"
+          fill="url(#paper)" stroke="#666863" stroke-width="5"/>
+
+    <path d="M32 61c0-9 7-17 16-17h160c9 0 16 8 16 17v42H32z"
+          fill="url(#gold)" stroke="#79570b" stroke-width="4"/>
+
+    <g fill="none" stroke="#8a650f" stroke-width="7">
+      <path d="M75 24v43"/>
+      <path d="M181 24v43"/>
+    </g>
+
+    <g fill="#d8a923" stroke="#77540a" stroke-width="3">
+      <circle cx="75" cy="35" r="10"/>
+      <circle cx="181" cy="35" r="10"/>
+    </g>
+
+    <text x="128" y="83"
+          text-anchor="middle"
+          font-family="sans-serif"
+          font-weight="700"
+          font-size="24"
+          fill="#20211f">MAY</text>
+
+    <g font-family="sans-serif" fill="#353632" text-anchor="middle">
+      <text x="62" y="124" font-size="14">M</text>
+      <text x="90" y="124" font-size="14">T</text>
+      <text x="118" y="124" font-size="14">W</text>
+      <text x="146" y="124" font-size="14">T</text>
+      <text x="174" y="124" font-size="14">F</text>
+      <text x="202" y="124" font-size="14">S</text>
+
+      <text x="62" y="154" font-size="18">12</text>
+      <text x="90" y="154" font-size="18">13</text>
+      <text x="118" y="154" font-size="18">14</text>
+      <text x="146" y="154" font-size="18">15</text>
+
+      <rect x="160" y="136" width="29" height="27" rx="5"
+            fill="#d6a928" stroke="#8a650f" stroke-width="2"/>
+
+      <text x="174" y="155" font-size="18">16</text>
+
+      <text x="202" y="154" font-size="18">17</text>
+
+      <text x="62" y="190" font-size="18">19</text>
+      <text x="90" y="190" font-size="18">20</text>
+      <text x="118" y="190" font-size="18">21</text>
+      <text x="146" y="190" font-size="18">22</text>
+      <text x="174" y="190" font-size="18">23</text>
+      <text x="202" y="190" font-size="18">24</text>
+    </g>
+  </g>
+</svg>
