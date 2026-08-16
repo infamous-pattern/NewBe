@@ -1,0 +1,44 @@
+name: Quality
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  shell:
+    name: Shell validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Install ShellCheck
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes shellcheck
+
+      - name: Bash syntax check
+        shell: bash
+        run: |
+          find scripts -type f -name '*.sh' -print0 |
+            xargs -0 -r -n1 bash -n
+
+      - name: Run ShellCheck
+        shell: bash
+        run: |
+          find scripts -type f -name '*.sh' -print0 |
+            xargs -0 -r shellcheck
+
+      - name: Test installer dry-run
+        run: ./scripts/install.sh --dry-run
+
+      - name: Test uninstaller dry-run
+        run: ./scripts/uninstall.sh --dry-run

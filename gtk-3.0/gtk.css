@@ -1,0 +1,63 @@
+/*
+ * NewBe GTK 3 Theme
+ *
+ * Early development scaffold.
+ * Keep this file readable and auditable.
+ */
+
+@define-color newbe_gold #D6A928;
+@define-color newbe_gold_bright #E4BE45;
+@define-color newbe_gold_dark #A77A12;
+
+@define-color newbe_bg #E8E6DF;
+@define-color newbe_bg_secondary #D8D6CF;
+@define-color newbe_surface #F3F1EA;
+
+@define-color newbe_text #20211F;
+@define-color newbe_text_secondary #595B57;
+
+@define-color newbe_border #8E908A;
+@define-color newbe_shadow rgba(0, 0, 0, 0.18);
+
+* {
+    font-family: sans-serif;
+}
+
+window,
+.background {
+    background-color: @newbe_bg;
+    color: @newbe_text;
+}
+
+button {
+    background-color: @newbe_surface;
+    color: @newbe_text;
+
+    border: 1px solid @newbe_border;
+    border-radius: 3px;
+
+    padding: 5px 10px;
+}
+
+button:hover {
+    background-color: shade(@newbe_surface, 1.04);
+}
+
+button:active {
+    background-color: shade(@newbe_surface, 0.94);
+}
+
+selection {
+    background-color: @newbe_gold;
+    color: @newbe_text;
+}
+
+entry {
+    background-color: #FFFFFF;
+    color: @newbe_text;
+
+    border: 1px solid @newbe_border;
+    border-radius: 2px;
+
+    padding: 4px 6px;
+}

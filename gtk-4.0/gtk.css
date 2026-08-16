@@ -1,0 +1,57 @@
+/*
+ * NewBe GTK 4 Theme
+ *
+ * Wayland-first GNOME visual scaffold.
+ */
+
+@define-color newbe_gold #D6A928;
+@define-color newbe_gold_bright #E4BE45;
+@define-color newbe_gold_dark #A77A12;
+
+@define-color newbe_bg #E8E6DF;
+@define-color newbe_bg_secondary #D8D6CF;
+@define-color newbe_surface #F3F1EA;
+
+@define-color newbe_text #20211F;
+@define-color newbe_text_secondary #595B57;
+
+@define-color newbe_border #8E908A;
+
+window,
+.background {
+    background-color: @newbe_bg;
+    color: @newbe_text;
+}
+
+button {
+    background-color: @newbe_surface;
+    color: @newbe_text;
+
+    border: 1px solid @newbe_border;
+    border-radius: 3px;
+
+    padding: 5px 10px;
+}
+
+button:hover {
+    background-color: color-mix(
+        in srgb,
+        @newbe_surface 92%,
+        white
+    );
+}
+
+selection {
+    background-color: @newbe_gold;
+    color: @newbe_text;
+}
+
+entry {
+    background-color: white;
+    color: @newbe_text;
+
+    border: 1px solid @newbe_border;
+    border-radius: 2px;
+
+    padding: 4px 6px;
+}

@@ -1,0 +1,31 @@
+# Editor files
+*~
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Build artifacts
+build/
+dist/
+*.rpm
+*.tar.gz
+*.zip
+
+# Temporary files
+tmp/
+.cache/
+
+# Security scanner output
+*.sarif
+.bandit/

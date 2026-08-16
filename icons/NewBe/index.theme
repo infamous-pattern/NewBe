@@ -1,0 +1,35 @@
+[Icon Theme]
+Name=NewBe
+Comment=Modern icon theme inspired by the evolution of BeOS
+Inherits=Adwaita,hicolor
+Example=folder
+
+Directories=scalable/apps,scalable/actions,symbolic/apps,symbolic/actions
+
+[scalable/apps]
+Size=48
+Type=Scalable
+MinSize=16
+MaxSize=512
+Context=Applications
+
+[scalable/actions]
+Size=24
+Type=Scalable
+MinSize=16
+MaxSize=256
+Context=Actions
+
+[symbolic/apps]
+Size=16
+Type=Scalable
+MinSize=16
+MaxSize=64
+Context=Applications
+
+[symbolic/actions]
+Size=16
+Type=Scalable
+MinSize=16
+MaxSize=64
+Context=Actions
