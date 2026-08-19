@@ -6,7 +6,11 @@ NewBe is designed primarily for Fedora Workstation and modern GNOME, while remai
 
 ## Preview
 
-Current development previews generated directly from NewBe's repository-owned SVG assets.
+Current development previews use NewBe's repository-owned artwork and SVG assets.
+
+### Glass Horizon wallpaper
+
+![NewBe Glass Horizon wallpaper](docs/images/glass-horizon.png)
 
 ### Application icons
 
