@@ -60,3 +60,12 @@ jobs:
 
       - name: Test uninstaller dry-run
         run: ./scripts/uninstall.sh --dry-run
+
+      - name: Test isolated installation
+        run: ./scripts/test-install.sh
+
+      - name: Verify release archive
+        run: ./scripts/build-release.py --check
+
+      - name: Test extracted release
+        run: ./scripts/test-release.sh

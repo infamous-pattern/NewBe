@@ -55,6 +55,35 @@ Current development previews use NewBe's repository-owned artwork and SVG assets
 
 The NewBe cursor theme includes 15 original designs, four HiDPI sizes, and standard compatibility aliases. Its editable vector sources and reproducible build details are documented in [cursors/README.md](cursors/README.md).
 
+## Installation
+
+Download and extract the release archive, then run:
+
+```bash
+./scripts/verify.sh
+./scripts/install.sh
+```
+
+Each archive is published with a `.sha256` file. Verify both files from the same directory before extraction:
+
+```bash
+sha256sum --check NewBe-0.1.0-alpha.1.tar.gz.sha256
+```
+
+Installation is user-scoped and does not require root. It installs the GTK and Shell themes, icon and cursor theme, seven wallpapers, and the NewBe GNOME Shell extension. It does not change or enable any GNOME setting automatically.
+
+After installation, use GNOME Tweaks to select NewBe components. The extension can be enabled explicitly with:
+
+```bash
+gnome-extensions enable newbe@infamous-pattern.github.io
+```
+
+To remove all NewBe-owned user files without changing GNOME settings:
+
+```bash
+./scripts/uninstall.sh
+```
+
 ## Typography
 
 Recommended defaults:
@@ -119,7 +148,7 @@ The initial target platform is Fedora Workstation 44 running GNOME on Wayland.
 
 ## License
 
-License information is available in the `LICENSE` file.
+NewBe uses a split license: software, scripts, extension code, and CSS are available under MIT; original icons, cursors, wallpapers, and preview artwork are available under CC BY-SA 4.0. Exact path coverage and full license texts are in the [`LICENSE`](LICENSE) file and [`LICENSES`](LICENSES/) directory.
 
 ## Featured visual identity
 

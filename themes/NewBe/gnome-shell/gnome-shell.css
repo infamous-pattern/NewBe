@@ -1,0 +1,191 @@
+/*
+ * NewBe GNOME Shell Theme
+ *
+ * Early development scaffold.
+ * Design target:
+ *   A modern Wayland desktop inspired by the evolution of BeOS.
+ */
+
+stage {
+    font-family: sans-serif;
+    color: #20211F;
+}
+
+/* Top panel */
+
+#panel {
+    background-color: rgba(232, 230, 223, 0.96);
+    color: #20211F;
+
+    border-bottom: 1px solid rgba(80, 80, 76, 0.55);
+
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.20);
+}
+
+#panel .panel-button {
+    color: #20211F;
+
+    border-radius: 3px;
+
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#panel .panel-button:hover {
+    background-color: rgba(214, 169, 40, 0.20);
+}
+
+#panel .panel-button:active,
+#panel .panel-button:checked {
+    background-color: #D6A928;
+    color: #20211F;
+}
+
+/* Popovers and menus */
+
+.popup-menu-content {
+    background-color: #F3F1EA;
+    color: #20211F;
+
+    border: 1px solid #8E908A;
+    border-radius: 5px;
+
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.20);
+
+    padding: 6px;
+}
+
+.popup-menu-item {
+    border-radius: 3px;
+    padding: 7px 10px;
+}
+
+.popup-menu-item:hover,
+.popup-menu-item:focus,
+.popup-menu-item:selected {
+    background-color: #D6A928;
+    color: #20211F;
+}
+
+/* Quick Settings */
+
+.quick-settings {
+    background-color: #F3F1EA;
+    color: #20211F;
+
+    border: 1px solid #8E908A;
+    border-radius: 6px;
+}
+
+.quick-toggle {
+    background-color: #E8E6DF;
+    color: #20211F;
+
+    border-radius: 4px;
+}
+
+.quick-toggle:hover {
+    background-color: #EFEDE6;
+}
+
+.quick-toggle:checked {
+    background-color: #D6A928;
+    color: #20211F;
+}
+
+/* Notifications */
+
+.message-list {
+    color: #20211F;
+}
+
+.message {
+    background-color: #F3F1EA;
+    color: #20211F;
+
+    border: 1px solid #8E908A;
+    border-radius: 5px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.16);
+}
+
+/* Overview */
+
+#overview {
+    background-color: rgba(39, 41, 39, 0.68);
+}
+
+/* Search */
+
+.search-entry {
+    background-color: rgba(243, 241, 234, 0.97);
+    color: #20211F;
+
+    border: 1px solid #8E908A;
+    border-radius: 5px;
+
+    selection-background-color: #D6A928;
+    selected-color: #20211F;
+}
+
+/* Workspace thumbnails */
+
+.workspace-thumbnail {
+    border: 1px solid rgba(214, 169, 40, 0.35);
+    border-radius: 4px;
+}
+
+.workspace-thumbnail-indicator {
+    border: 2px solid #D6A928;
+    border-radius: 4px;
+}
+
+/* Dash */
+
+#dash {
+    background-color: rgba(39, 41, 39, 0.92);
+
+    border: 1px solid rgba(214, 169, 40, 0.32);
+    border-radius: 6px;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.24);
+}
+
+#dash .app-well-app:hover .overview-icon,
+#dash .app-well-app:focus .overview-icon {
+    background-color: rgba(214, 169, 40, 0.18);
+}
+
+/* Dialogs */
+
+.modal-dialog {
+    background-color: #F3F1EA;
+    color: #20211F;
+
+    border: 1px solid #8E908A;
+    border-radius: 6px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+/* NewBe accent helpers */
+
+.newbe-accent {
+    background-color: #D6A928;
+    color: #20211F;
+}
+
+.newbe-accent-bright {
+    background-color: #E4BE45;
+    color: #20211F;
+}
+
+.newbe-accent-dark {
+    background-color: #A77A12;
+    color: #F0EEE7;
+}

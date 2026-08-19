@@ -8,6 +8,7 @@ THEME_ROOT="${XDG_DATA_HOME:-$HOME/.local/share}/themes"
 ICON_ROOT="${XDG_DATA_HOME:-$HOME/.local/share}/icons"
 WALLPAPER_ROOT="${XDG_DATA_HOME:-$HOME/.local/share}/backgrounds/NewBe"
 BACKGROUND_PROPERTIES="${XDG_DATA_HOME:-$HOME/.local/share}/gnome-background-properties/newbe.xml"
+EXTENSION_TARGET="${XDG_DATA_HOME:-$HOME/.local/share}/gnome-shell/extensions/newbe@infamous-pattern.github.io"
 
 DRY_RUN=false
 
@@ -55,6 +56,7 @@ done
 run rm -rf -- "$THEME_ROOT/NewBe"
 run rm -rf -- "$THEME_ROOT/NewBe-Dark"
 run rm -rf -- "$ICON_ROOT/NewBe"
+run rm -rf -- "$EXTENSION_TARGET"
 
 while IFS='|' read -r number slug _; do
     [[ -n "$number" && "${number:0:1}" != "#" ]] || continue
