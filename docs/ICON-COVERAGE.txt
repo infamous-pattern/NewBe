@@ -2,25 +2,6 @@ NewBe Icon Coverage Audit
 =========================
 
 Unique themed icon names requested: 46
-NewBe native matches:               38
-Fallback required:                  8
-Native coverage:                    82.6%
-
-Missing NewBe icons
--------------------
-gnome-color-manager
-  org.gnome.ColorProfileViewer.desktop
-org.freedesktop.MalcontentControl
-  org.freedesktop.MalcontentControl.desktop
-org.gtk.Demo4
-  org.gtk.Demo4.desktop
-org.gtk.PrintEditor4
-  org.gtk.PrintEditor4.desktop
-org.gtk.Shaper
-  org.gtk.Shaper.desktop
-org.gtk.WidgetFactory4
-  org.gtk.WidgetFactory4.desktop
-org.gtk.gtk4.NodeEditor
-  org.gtk.gtk4.NodeEditor.desktop
-rygel
-  rygel-preferences.desktop
+NewBe native matches:               46
+Fallback required:                  0
+Native coverage:                    100.0%

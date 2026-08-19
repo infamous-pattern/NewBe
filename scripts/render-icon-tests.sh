@@ -74,6 +74,14 @@ icons=(
     "$PROJECT_ROOT/icons/NewBe/scalable/apps/libreoffice-impress.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/apps/peazip.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/apps/solaar.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/gnome-color-manager.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.freedesktop.MalcontentControl.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gtk.Demo4.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gtk.PrintEditor4.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gtk.Shaper.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gtk.WidgetFactory4.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gtk.gtk4.NodeEditor.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/rygel.svg"
 )
 
 sizes=(
