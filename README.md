@@ -70,6 +70,8 @@ NewBe includes seven official wallpapers:
 6. Floating Panels
 7. Moon Reflection
 
+[Browse and download every wallpaper in all supported sizes](assets/wallpapers/README.md). Original PNG masters and SHA-256 checksums are included.
+
 Featured hero wallpapers:
 
 - Glass Horizon — primary hero

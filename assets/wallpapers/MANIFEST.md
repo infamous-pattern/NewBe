@@ -33,6 +33,10 @@ Each wallpaper should ship in:
 - 3840x2160
 - 5120x2160
 
+All seven resolutions are checked into the wallpaper's numbered directory as ready-to-use JPEG files. The original generated PNG master is preserved alongside them.
+
+See [README.md](README.md) for direct downloads and integrity-verification instructions.
+
 ## Naming convention
 
 newbe-<number>-<slug>-<width>x<height>.jpg

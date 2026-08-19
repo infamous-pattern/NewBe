@@ -43,6 +43,9 @@ jobs:
             --manifest icons/coverage-apps.conf \
             --check docs/ICON-COVERAGE.txt
 
+      - name: Verify wallpaper pack
+        run: ./scripts/wallpaper-audit.py
+
       - name: Test installer dry-run
         run: ./scripts/install.sh --dry-run
 
