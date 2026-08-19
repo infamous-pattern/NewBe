@@ -72,6 +72,8 @@ NewBe includes seven official wallpapers:
 
 [Browse and download every wallpaper in all supported sizes](assets/wallpapers/README.md). Original PNG masters and SHA-256 checksums are included.
 
+The user installer registers all seven 4K wallpapers with GNOME Background settings. Glass Horizon automatically pairs with Moon Reflection in GNOME's light/dark background mode. Installation never changes the currently selected wallpaper.
+
 Featured hero wallpapers:
 
 - Glass Horizon — primary hero

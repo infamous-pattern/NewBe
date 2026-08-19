@@ -33,6 +33,12 @@ check "NewBe-Dark GTK4" \
 check "NewBe icons" \
     "$DATA_HOME/icons/NewBe/index.theme"
 
+check "NewBe wallpapers" \
+    "$DATA_HOME/backgrounds/NewBe/newbe-02-glass-horizon-3840x2160.jpg"
+
+check "GNOME wallpaper catalog" \
+    "$DATA_HOME/gnome-background-properties/newbe.xml"
+
 printf '\nSecurity posture\n'
 printf '%s\n' '----------------'
 printf 'System files modified by this script: None\n'

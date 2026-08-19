@@ -2,8 +2,12 @@
 
 set -euo pipefail
 
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
 THEME_ROOT="${XDG_DATA_HOME:-$HOME/.local/share}/themes"
 ICON_ROOT="${XDG_DATA_HOME:-$HOME/.local/share}/icons"
+WALLPAPER_ROOT="${XDG_DATA_HOME:-$HOME/.local/share}/backgrounds/NewBe"
+BACKGROUND_PROPERTIES="${XDG_DATA_HOME:-$HOME/.local/share}/gnome-background-properties/newbe.xml"
 
 DRY_RUN=false
 
@@ -51,6 +55,19 @@ done
 run rm -rf -- "$THEME_ROOT/NewBe"
 run rm -rf -- "$THEME_ROOT/NewBe-Dark"
 run rm -rf -- "$ICON_ROOT/NewBe"
+
+while IFS='|' read -r number slug _; do
+    [[ -n "$number" && "${number:0:1}" != "#" ]] || continue
+    run rm -f -- "$WALLPAPER_ROOT/newbe-$number-$slug-3840x2160.jpg"
+done < "$PROJECT_ROOT/assets/wallpapers/wallpapers.conf"
+
+run rm -f -- "$BACKGROUND_PROPERTIES"
+
+if "$DRY_RUN"; then
+    run rmdir --ignore-fail-on-non-empty "$WALLPAPER_ROOT"
+else
+    rmdir --ignore-fail-on-non-empty "$WALLPAPER_ROOT" 2>/dev/null || true
+fi
 
 printf 'NewBe user files removed.\n'
 printf 'GNOME settings were not changed.\n'

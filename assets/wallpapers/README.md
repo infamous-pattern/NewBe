@@ -4,6 +4,8 @@ The complete NewBe wallpaper collection is stored in this repository so it can b
 
 Every wallpaper includes its original PNG master and ready-to-use JPEG exports at 1920×1080, 1920×1200, 2560×1440, 2560×1600, 3440×1440, 3840×2160, and 5120×2160.
 
+Running `scripts/install.sh` installs the seven 4K exports into the current user's data directory and registers them with GNOME Background settings. It does not select a wallpaper or modify any GNOME setting.
+
 | Wallpaper | Role | Browse files | 4K download |
 |---|---|---|---|
 | Desert Dawn | Supporting | [All sizes](01-desert-dawn/) | [3840×2160](01-desert-dawn/newbe-01-desert-dawn-3840x2160.jpg) |

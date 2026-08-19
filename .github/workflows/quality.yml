@@ -46,6 +46,12 @@ jobs:
       - name: Verify wallpaper pack
         run: ./scripts/wallpaper-audit.py
 
+      - name: Verify GNOME background metadata
+        run: |
+          ./scripts/generate-background-properties.py \
+            --wallpaper-root /example/user/.local/share/backgrounds/NewBe \
+            --check
+
       - name: Test installer dry-run
         run: ./scripts/install.sh --dry-run
 
