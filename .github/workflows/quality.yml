@@ -37,6 +37,12 @@ jobs:
           find scripts -type f -name '*.sh' -print0 |
             xargs -0 -r shellcheck
 
+      - name: Verify icon coverage report
+        run: |
+          ./scripts/icon-audit.py \
+            --manifest icons/coverage-apps.conf \
+            --check docs/ICON-COVERAGE.txt
+
       - name: Test installer dry-run
         run: ./scripts/install.sh --dry-run
 

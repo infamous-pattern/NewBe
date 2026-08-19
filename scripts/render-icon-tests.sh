@@ -41,6 +41,18 @@ icons=(
     "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Calendar.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Software.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.TextEditor.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Settings.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Ptyxis.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.SystemMonitor.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.DiskUtility.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Loupe.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Snapshot.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Characters.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Contacts.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Weather.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.clocks.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Maps.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.tweaks.svg"
 )
 
 sizes=(
@@ -81,6 +93,7 @@ while IFS= read -r -d '' icon; do
     done
 done < <(find \
     "$PROJECT_ROOT/icons/NewBe/symbolic/actions" \
+    "$PROJECT_ROOT/icons/NewBe/symbolic/apps" \
     "$PROJECT_ROOT/icons/NewBe/symbolic/status" \
     -type f -name '*.svg' -print0)
 

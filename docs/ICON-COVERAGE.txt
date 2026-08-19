@@ -1,19 +1,23 @@
 NewBe Icon Coverage Audit
 =========================
 
-Unique themed icon names requested: 44
-NewBe native matches:               0
-Fallback required:                  44
-Native coverage:                    0.0%
+Unique themed icon names requested: 46
+NewBe native matches:               17
+Fallback required:                  29
+Native coverage:                    37.0%
 
 Missing NewBe icons
 -------------------
 1password
   1password.desktop
+chatgpt
+  chatgpt.desktop
 firefox
   org.mozilla.firefox.desktop
 gnome-color-manager
   org.gnome.ColorProfileViewer.desktop
+google-chrome
+  google-chrome.desktop
 libreoffice-calc
   libreoffice-calc.desktop
 libreoffice-impress
@@ -26,60 +30,26 @@ org.freedesktop.MalcontentControl
   org.freedesktop.MalcontentControl.desktop
 org.gnome.Boxes
   org.gnome.Boxes.desktop
-org.gnome.Calculator
-  org.gnome.Calculator.desktop
-org.gnome.Calendar
-  org.gnome.Calendar.desktop
-org.gnome.Characters
-  org.gnome.Characters.desktop
 org.gnome.Connections
   org.gnome.Connections.desktop
-org.gnome.Contacts
-  org.gnome.Contacts.desktop
 org.gnome.Decibels
   org.gnome.Decibels.desktop
-org.gnome.DiskUtility
-  org.gnome.DiskUtility.desktop
 org.gnome.Logs
   org.gnome.Logs.desktop
-org.gnome.Loupe
-  org.gnome.Loupe.desktop
-org.gnome.Maps
-  org.gnome.Maps.desktop
-org.gnome.Nautilus
-  org.gnome.Nautilus.desktop
 org.gnome.Papers
   org.gnome.Papers.desktop
-org.gnome.Ptyxis
-  org.gnome.Ptyxis.desktop
-org.gnome.Settings
-  org.gnome.Settings.desktop
 org.gnome.Showtime
   org.gnome.Showtime.desktop
 org.gnome.SimpleScan
   org.gnome.SimpleScan.desktop
-org.gnome.Snapshot
-  org.gnome.Snapshot.desktop
-org.gnome.Software
-  org.gnome.Software.desktop
-org.gnome.SystemMonitor
-  gnome-system-monitor-kde.desktop, org.gnome.SystemMonitor.desktop
-org.gnome.TextEditor
-  org.gnome.TextEditor.desktop
 org.gnome.Tour
   org.gnome.Tour.desktop
-org.gnome.Weather
-  org.gnome.Weather.desktop
 org.gnome.Yelp
   org.gnome.Yelp.desktop
 org.gnome.baobab
   org.gnome.baobab.desktop
-org.gnome.clocks
-  org.gnome.clocks.desktop
 org.gnome.font-viewer
   org.gnome.font-viewer.desktop
-org.gnome.tweaks
-  org.gnome.tweaks.desktop
 org.gtk.Demo4
   org.gtk.Demo4.desktop
 org.gtk.PrintEditor4
