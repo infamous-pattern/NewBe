@@ -4,6 +4,22 @@
 
 NewBe is designed primarily for Fedora Workstation and modern GNOME, while remaining as portable as practical across current GNOME-based Linux distributions.
 
+## Preview
+
+Current development previews generated directly from NewBe's repository-owned SVG assets.
+
+### Application icons
+
+![NewBe application icons](docs/images/application-icons.png)
+
+### Places and devices
+
+![NewBe folder, place, and device icons](docs/images/places-and-devices.png)
+
+### GNOME utilities
+
+![NewBe GNOME utility icons](docs/images/gnome-utilities.png)
+
 ## Design goals
 
 - Wayland-first
