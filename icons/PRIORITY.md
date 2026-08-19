@@ -74,7 +74,7 @@
 - trash-empty
 - trash-full
 
-## Batch 4 — Symbolic UI
+## Batch 4 — Symbolic UI (core set)
 
 - navigation
 - media

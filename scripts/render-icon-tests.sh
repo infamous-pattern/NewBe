@@ -67,5 +67,22 @@ for icon in "${icons[@]}"; do
     done
 done
 
+while IFS= read -r -d '' icon; do
+    name="$(basename "$icon" .svg)"
+
+    for size in 16 32; do
+        destination="$OUTPUT/${name}-${size}.png"
+
+        rsvg-convert \
+            --width "$size" \
+            --height "$size" \
+            --output "$destination" \
+            "$icon"
+    done
+done < <(find \
+    "$PROJECT_ROOT/icons/NewBe/symbolic/actions" \
+    "$PROJECT_ROOT/icons/NewBe/symbolic/status" \
+    -type f -name '*.svg' -print0)
+
 printf 'NewBe icon render tests created:\n'
 printf '  %s\n' "$OUTPUT"
