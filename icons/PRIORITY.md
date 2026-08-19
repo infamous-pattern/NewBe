@@ -60,6 +60,7 @@
 - folder-download
 - folder-music
 - folder-pictures
+- folder-projects
 - folder-publicshare
 - folder-templates
 - folder-videos
