@@ -18,8 +18,14 @@ mkdir -p "$OUTPUT"
 icons=(
     "$PROJECT_ROOT/icons/NewBe/scalable/places/folder.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/places/user-home.svg"
-    "$PROJECT_ROOT/icons/NewBe/scalable/devices/drive-harddisk.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/places/folder-download.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/places/folder-documents.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/places/folder-pictures.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/places/folder-videos.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/places/network-server.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/places/trash-empty.svg"
+
+    "$PROJECT_ROOT/icons/NewBe/scalable/devices/drive-harddisk.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/devices/computer.svg"
 
     "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Nautilus.svg"

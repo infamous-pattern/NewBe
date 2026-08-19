@@ -1,1 +1,33 @@
-folder.svg
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3cf62"/>
+      <stop offset=".5" stop-color="#d6a928"/>
+      <stop offset="1" stop-color="#a77a12"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffef8"/>
+      <stop offset="1" stop-color="#d8d6cf"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-opacity=".24"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <path d="M27 62h72l17 20h111c9 0 16 7 16 16v112c0 10-8 18-18 18H31c-10 0-18-8-18-18V78c0-9 7-16 16-16z"
+          fill="url(#gold)" stroke="#79570b" stroke-width="4"/>
+
+    <path d="M28 111h200v96c0 8-6 14-14 14H42c-8 0-14-6-14-14z"
+          fill="url(#gold)" stroke="#79570b" stroke-width="4"/>
+
+    <path d="M86 121h70l27 27v57H86z"
+          fill="url(#paper)" stroke="#666863" stroke-width="4"/>
+
+    <path d="M156 121v28h27"
+          fill="none" stroke="#8e908a" stroke-width="4"/>
+
+    <path d="M101 160h63M101 174h63M101 188h48"
+          stroke="#8e908a" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>
