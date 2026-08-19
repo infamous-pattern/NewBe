@@ -43,6 +43,9 @@ jobs:
             --manifest icons/coverage-apps.conf \
             --check docs/ICON-COVERAGE.txt
 
+      - name: Verify cursor theme
+        run: ./scripts/cursor-audit.py
+
       - name: Verify wallpaper pack
         run: ./scripts/wallpaper-audit.py
 

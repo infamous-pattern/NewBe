@@ -24,6 +24,10 @@ Current development previews use NewBe's repository-owned artwork and SVG assets
 
 ![NewBe GNOME utility icons](docs/images/gnome-utilities.png)
 
+### Cursor theme
+
+![NewBe cursor theme](docs/images/cursors.png)
+
 ## Design goals
 
 - Wayland-first
@@ -48,6 +52,8 @@ Current development previews use NewBe's repository-owned artwork and SVG assets
 - NewBe wallpaper collection
 - NewBe GNOME Shell extension
 - Installation and audit tools
+
+The NewBe cursor theme includes 15 original designs, four HiDPI sizes, and standard compatibility aliases. Its editable vector sources and reproducible build details are documented in [cursors/README.md](cursors/README.md).
 
 ## Typography
 

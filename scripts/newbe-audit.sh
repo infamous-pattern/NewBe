@@ -33,6 +33,9 @@ check "NewBe-Dark GTK4" \
 check "NewBe icons" \
     "$DATA_HOME/icons/NewBe/index.theme"
 
+check "NewBe cursors" \
+    "$DATA_HOME/icons/NewBe/cursors/left_ptr"
+
 check "NewBe wallpapers" \
     "$DATA_HOME/backgrounds/NewBe/newbe-02-glass-horizon-3840x2160.jpg"
 
