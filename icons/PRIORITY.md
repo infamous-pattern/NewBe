@@ -53,7 +53,7 @@
 - org.gtk.WidgetFactory4
 - org.gtk.gtk4.NodeEditor
 
-## Batch 3 — Core desktop objects
+## Batch 3 — Core desktop objects (complete)
 
 - folder
 - folder-documents

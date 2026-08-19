@@ -22,13 +22,18 @@ icons=(
     "$PROJECT_ROOT/icons/NewBe/scalable/places/folder-documents.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/places/folder-pictures.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/places/folder-projects.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/places/folder-publicshare.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/places/folder-templates.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/places/folder-music.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/places/folder-videos.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/places/folder-network.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/places/user-desktop.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/places/network-server.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/places/trash-empty.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/places/trash-full.svg"
 
     "$PROJECT_ROOT/icons/NewBe/scalable/devices/drive-harddisk.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/devices/drive-removable-media.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/devices/computer.svg"
 
     "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Nautilus.svg"

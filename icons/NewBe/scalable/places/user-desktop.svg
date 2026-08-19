@@ -2,18 +2,16 @@
   <defs>
     <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3cf62"/><stop offset=".5" stop-color="#d6a928"/><stop offset="1" stop-color="#a77a12"/></linearGradient>
     <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5f5f2"/><stop offset=".5" stop-color="#bfc1bc"/><stop offset="1" stop-color="#777a75"/></linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22304a"/><stop offset=".55" stop-color="#78684a"/><stop offset="1" stop-color="#d6a928"/></linearGradient>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="7" flood-opacity=".24"/></filter>
   </defs>
   <g filter="url(#shadow)">
     <path d="M27 62h72l17 20h111c9 0 16 7 16 16v112c0 10-8 18-18 18H31c-10 0-18-8-18-18V78c0-9 7-16 16-16z" fill="url(#gold)" stroke="#79570b" stroke-width="4"/>
     <path d="M28 111h200v96c0 8-6 14-14 14H42c-8 0-14-6-14-14z" fill="url(#gold)" stroke="#79570b" stroke-width="4"/>
-    <circle cx="128" cy="163" r="43" fill="url(#metal)" stroke="#666863" stroke-width="4"/>
-    <g fill="url(#gold)" stroke="#79570b" stroke-width="3">
-      <circle cx="113" cy="148" r="10"/>
-      <circle cx="145" cy="148" r="10"/>
-      <path d="M91 187c2-19 10-29 22-29s20 10 22 29z"/>
-      <path d="M123 187c2-19 10-29 22-29s20 10 22 29z"/>
-    </g>
-    <path d="M105 143c3-4 7-6 12-6M137 143c3-4 7-6 12-6" stroke="#f8dc7a" stroke-width="3" stroke-linecap="round"/>
+    <rect x="75" y="123" width="106" height="67" rx="8" fill="url(#metal)" stroke="#555752" stroke-width="4"/>
+    <rect x="84" y="132" width="88" height="48" rx="3" fill="url(#screen)" stroke="#2f312e" stroke-width="3"/>
+    <path d="M84 169c20-25 40-24 55-8 11 12 21 11 33-4v23H84z" fill="#d6a928" opacity=".82"/>
+    <path d="M118 190h20l4 12h-28z" fill="url(#metal)" stroke="#555752" stroke-width="3"/>
+    <path d="M104 203h48" stroke="#555752" stroke-width="6" stroke-linecap="round"/>
   </g>
 </svg>
