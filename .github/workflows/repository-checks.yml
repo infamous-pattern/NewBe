@@ -27,7 +27,7 @@ jobs:
 
           while IFS= read -r file; do
             case "$file" in
-              scripts/*.sh)
+              scripts/*.sh|scripts/*.py)
                 ;;
               *)
                 echo "Unexpected executable file: $file"
