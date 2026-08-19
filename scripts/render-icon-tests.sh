@@ -21,7 +21,9 @@ icons=(
     "$PROJECT_ROOT/icons/NewBe/scalable/places/folder-download.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/places/folder-documents.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/places/folder-pictures.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/places/folder-music.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/places/folder-videos.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/places/folder-network.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/places/network-server.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/places/trash-empty.svg"
 

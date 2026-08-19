@@ -34,7 +34,7 @@ check "NewBe icons" \
     "$DATA_HOME/icons/NewBe/index.theme"
 
 printf '\nSecurity posture\n'
-printf '----------------\n'
+printf '%s\n' '----------------'
 printf 'System files modified by this script: None\n'
 printf 'Root privileges required:             No\n'
 printf 'Automatic GNOME settings changes:     None\n'
