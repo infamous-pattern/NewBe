@@ -2,9 +2,9 @@ NewBe Icon Coverage Audit
 =========================
 
 Unique themed icon names requested: 46
-NewBe native matches:               17
-Fallback required:                  29
-Native coverage:                    37.0%
+NewBe native matches:               29
+Fallback required:                  17
+Native coverage:                    63.0%
 
 Missing NewBe icons
 -------------------
@@ -24,32 +24,8 @@ libreoffice-impress
   libreoffice-impress.desktop
 libreoffice-writer
   libreoffice-writer.desktop
-org.fedoraproject.MediaWriter
-  org.fedoraproject.MediaWriter.desktop
 org.freedesktop.MalcontentControl
   org.freedesktop.MalcontentControl.desktop
-org.gnome.Boxes
-  org.gnome.Boxes.desktop
-org.gnome.Connections
-  org.gnome.Connections.desktop
-org.gnome.Decibels
-  org.gnome.Decibels.desktop
-org.gnome.Logs
-  org.gnome.Logs.desktop
-org.gnome.Papers
-  org.gnome.Papers.desktop
-org.gnome.Showtime
-  org.gnome.Showtime.desktop
-org.gnome.SimpleScan
-  org.gnome.SimpleScan.desktop
-org.gnome.Tour
-  org.gnome.Tour.desktop
-org.gnome.Yelp
-  org.gnome.Yelp.desktop
-org.gnome.baobab
-  org.gnome.baobab.desktop
-org.gnome.font-viewer
-  org.gnome.font-viewer.desktop
 org.gtk.Demo4
   org.gtk.Demo4.desktop
 org.gtk.PrintEditor4

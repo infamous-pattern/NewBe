@@ -53,6 +53,18 @@ icons=(
     "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.clocks.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Maps.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.tweaks.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Boxes.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Connections.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Decibels.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Logs.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Papers.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Showtime.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.SimpleScan.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Tour.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Yelp.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.baobab.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.font-viewer.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.fedoraproject.MediaWriter.svg"
 )
 
 sizes=(
