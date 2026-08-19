@@ -65,6 +65,15 @@ icons=(
     "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.baobab.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.font-viewer.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.fedoraproject.MediaWriter.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/firefox.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/google-chrome.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/chatgpt.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/1password.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/libreoffice-writer.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/libreoffice-calc.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/libreoffice-impress.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/peazip.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/apps/solaar.svg"
 )
 
 sizes=(

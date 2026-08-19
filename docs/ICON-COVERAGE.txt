@@ -2,28 +2,14 @@ NewBe Icon Coverage Audit
 =========================
 
 Unique themed icon names requested: 46
-NewBe native matches:               29
-Fallback required:                  17
-Native coverage:                    63.0%
+NewBe native matches:               38
+Fallback required:                  8
+Native coverage:                    82.6%
 
 Missing NewBe icons
 -------------------
-1password
-  1password.desktop
-chatgpt
-  chatgpt.desktop
-firefox
-  org.mozilla.firefox.desktop
 gnome-color-manager
   org.gnome.ColorProfileViewer.desktop
-google-chrome
-  google-chrome.desktop
-libreoffice-calc
-  libreoffice-calc.desktop
-libreoffice-impress
-  libreoffice-impress.desktop
-libreoffice-writer
-  libreoffice-writer.desktop
 org.freedesktop.MalcontentControl
   org.freedesktop.MalcontentControl.desktop
 org.gtk.Demo4
@@ -36,9 +22,5 @@ org.gtk.WidgetFactory4
   org.gtk.WidgetFactory4.desktop
 org.gtk.gtk4.NodeEditor
   org.gtk.gtk4.NodeEditor.desktop
-peazip
-  io.github.peazip.PeaZip.desktop
 rygel
   rygel-preferences.desktop
-solaar
-  solaar.desktop
