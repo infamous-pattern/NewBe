@@ -33,6 +33,10 @@ Pressed / dark gold:
 
     #A77A12
 
+Accessible light-surface link:
+
+    #79570B
+
 ### Light surfaces
 
 Primary background:
@@ -157,3 +161,14 @@ NewBe follows the GNOME system color-scheme preference.
 It should not require users to maintain an independent NewBe light/dark preference.
 
 The theme must remain usable when users modify fonts, cursors, icons, and other standard GNOME settings through GNOME Tweaks.
+
+## Accessibility
+
+Keyboard focus must remain visibly distinct from hover and selection. NewBe
+uses a darker gold outline on light surfaces and a bright gold outline on dark
+surfaces. Normal-size links on light surfaces use the deeper link token instead
+of the decorative gold accent.
+
+GTK themes must not override the user's chosen font size. Accessibility and
+compatibility expectations, automated checks, and the manual release checklist
+are documented in [ACCESSIBILITY.md](ACCESSIBILITY.md).

@@ -49,6 +49,9 @@ jobs:
       - name: Verify wallpaper pack
         run: ./scripts/wallpaper-audit.py
 
+      - name: Verify accessibility baseline
+        run: ./scripts/accessibility-audit.py
+
       - name: Verify GNOME background metadata
         run: |
           ./scripts/generate-background-properties.py \

@@ -79,6 +79,29 @@ entry:focus {
     border-color: @newbe_gold;
 }
 
+button:focus,
+checkbutton:focus,
+radiobutton:focus,
+check:focus,
+radio:focus,
+switch:focus,
+scale:focus,
+notebook > header > tabs > tab:focus {
+    outline-color: @newbe_gold_bright;
+    outline-style: solid;
+    outline-width: 2px;
+    outline-offset: 1px;
+}
+
+link,
+link:visited {
+    color: @newbe_gold_bright;
+}
+
+link:hover {
+    color: #f1cf65;
+}
+
 selection,
 *:selected {
     background-color: @newbe_gold;

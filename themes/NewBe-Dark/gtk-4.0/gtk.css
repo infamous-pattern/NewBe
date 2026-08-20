@@ -204,6 +204,8 @@ checkbutton:focus-visible,
 switch:focus-visible,
 scale:focus-visible {
     outline-color: @newbe_gold_bright;
+    outline-width: 2px;
+    outline-offset: 1px;
 }
 
 

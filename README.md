@@ -40,6 +40,7 @@ Current development previews use NewBe's repository-owned artwork and SVG assets
 - No modification of GNOME system files during user installation
 - Auditable installation and maintenance scripts
 - Security scanning in CI
+- Automated accessibility contrast and focus checks
 - Clean uninstall and rollback support
 
 ## Components
@@ -139,6 +140,9 @@ The project will use automated security and quality checks including:
 - install/uninstall testing
 
 NewBe will never use `curl | sh` style installation.
+
+Accessibility expectations, automated coverage, and the manual GNOME test
+matrix are documented in [docs/ACCESSIBILITY.md](docs/ACCESSIBILITY.md).
 
 ## Status
 
