@@ -3,6 +3,8 @@
   "name": "NewBe",
   "description": "Wayland-first GNOME Shell integration for the NewBe desktop experience.",
   "shell-version": [
+    "48",
+    "49",
     "50"
   ],
   "url": "https://github.com/infamous-pattern/NewBe",

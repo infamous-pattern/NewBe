@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.0-alpha.2 — 2026-08-19
+
+Release-stabilization preview.
+
+- Accessible keyboard-focus styling across GTK 3, GTK 4, GNOME Shell, and the extension
+- WCAG-inspired automated contrast checks for representative text, links, and focus indicators
+- Verified Large Text and High Contrast system overrides with user settings restored after testing
+- GNOME Shell extension support expanded to versions 48, 49, and 50
+- Fedora 42, 43, and 44 extension-package compatibility matrix
+- Release metadata consistency checks and expanded accessibility/compatibility documentation
+
 ## 0.1.0-alpha.1 — 2026-08-19
 
 Initial public preview of the NewBe desktop experience.
