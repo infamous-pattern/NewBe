@@ -68,7 +68,7 @@ Download and extract the release archive, then run:
 Each archive is published with a `.sha256` file. Verify both files from the same directory before extraction:
 
 ```bash
-sha256sum --check NewBe-0.1.0-alpha.1.tar.gz.sha256
+sha256sum --check NewBe-0.1.0-alpha.2.tar.gz.sha256
 ```
 
 Installation is user-scoped and does not require root. It installs the GTK and Shell themes, icon and cursor theme, seven wallpapers, and the NewBe GNOME Shell extension. It does not change or enable any GNOME setting automatically.
@@ -148,7 +148,10 @@ matrix are documented in [docs/ACCESSIBILITY.md](docs/ACCESSIBILITY.md).
 
 NewBe is currently in early development.
 
-The initial target platform is Fedora Workstation 44 running GNOME on Wayland.
+The primary target platform is Fedora Workstation 44 running GNOME 50 on
+Wayland. The Shell extension is also package-validated for GNOME 48 and 49 on
+Fedora 42 and 43. See [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md) for the
+tested-support matrix and its limits.
 
 ## License
 

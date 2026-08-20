@@ -37,11 +37,14 @@ PACKAGE_ITEMS = (
 )
 REQUIRED_MEMBERS = (
     "README.md",
+    "docs/ACCESSIBILITY.md",
+    "docs/COMPATIBILITY.md",
     "LICENSE",
     "LICENSES/MIT.txt",
     "LICENSES/CC-BY-SA-4.0.txt",
     "VERSION",
     "scripts/install.sh",
+    "scripts/release-metadata-audit.py",
     "scripts/uninstall.sh",
     "scripts/verify.sh",
     "themes/NewBe/gnome-shell/gnome-shell.css",

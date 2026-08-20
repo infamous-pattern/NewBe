@@ -1,0 +1,66 @@
+name: Compatibility
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  extension:
+    name: Fedora ${{ matrix.fedora }} / GNOME ${{ matrix.gnome }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    container:
+      image: registry.fedoraproject.org/fedora:${{ matrix.fedora }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - fedora: 42
+            gnome: 48
+          - fedora: 43
+            gnome: 49
+          - fedora: 44
+            gnome: 50
+
+    steps:
+      - name: Install compatibility tools
+        run: |
+          dnf install --assumeyes --setopt=install_weak_deps=False \
+            cpio \
+            git \
+            glib2 \
+            gnome-autoar \
+            json-glib \
+            libsoup3 \
+            python3 \
+            rpm
+
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Extract version-specific extension packager
+        shell: bash
+        run: |
+          dnf download --destdir /tmp gnome-shell
+          package="$(find /tmp -maxdepth 1 -type f -name 'gnome-shell-*.rpm' -print -quit)"
+          test -n "$package"
+
+          actual="$(rpm -qp --qf '%{VERSION}' "$package" | cut -d. -f1)"
+          test "$actual" = "${{ matrix.gnome }}"
+
+          mkdir /tmp/gnome-shell-package
+          cd /tmp/gnome-shell-package
+          rpm2cpio "$package" |
+            cpio -idm ./usr/bin/gnome-extensions
+          echo /tmp/gnome-shell-package/usr/bin >> "$GITHUB_PATH"
+
+      - name: Build and validate extension package
+        run: ./scripts/verify-extension.sh --require-package-tool

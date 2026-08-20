@@ -39,6 +39,10 @@ The clean-environment test covers installation, uninstallation, and packaged
 release verification in a Fedora 44 container. A container does not replace a
 real GNOME desktop usability test.
 
+The broader GNOME and Fedora test matrix, including the distinction between
+package validation and live testing, is documented in
+[COMPATIBILITY.md](COMPATIBILITY.md).
+
 ## Manual release checklist
 
 Before a stable release, test the installed theme on a real GNOME Wayland

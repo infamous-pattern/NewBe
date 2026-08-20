@@ -67,6 +67,9 @@ jobs:
       - name: Test isolated installation
         run: ./scripts/test-install.sh
 
+      - name: Verify release metadata
+        run: ./scripts/release-metadata-audit.py
+
       - name: Verify release archive
         run: ./scripts/build-release.py --check
 
