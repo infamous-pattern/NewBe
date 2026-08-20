@@ -8,12 +8,12 @@ cd "$PROJECT_ROOT"
 printf 'NewBe Local Verification\n'
 printf '========================\n\n'
 
-printf '[1/14] Bash syntax\n'
+printf '[1/15] Bash syntax\n'
 while IFS= read -r -d '' script; do
     bash -n "$script"
 done < <(find scripts -type f -name '*.sh' -print0)
 
-printf '[2/14] ShellCheck\n'
+printf '[2/15] ShellCheck\n'
 if command -v shellcheck >/dev/null 2>&1; then
     while IFS= read -r -d '' script; do
         shellcheck "$script"
@@ -23,44 +23,47 @@ else
     exit 1
 fi
 
-printf '[3/14] Generated symbolic UI\n'
+printf '[3/15] Generated symbolic UI\n'
 ./scripts/build-symbolic-ui.py --check >/dev/null
 
-printf '[4/14] Icon coverage report\n'
+printf '[4/15] Icon coverage report\n'
 ./scripts/icon-audit.py \
     --manifest icons/coverage-apps.conf \
     --check docs/ICON-COVERAGE.txt
 
-printf '[5/14] Cursor theme\n'
+printf '[5/15] Cursor theme\n'
 ./scripts/cursor-audit.py >/dev/null
 
-printf '[6/14] Wallpaper pack\n'
+printf '[6/15] Wallpaper pack\n'
 ./scripts/wallpaper-audit.py >/dev/null
 
-printf '[7/14] GNOME background metadata\n'
+printf '[7/15] Accessibility baseline\n'
+./scripts/accessibility-audit.py >/dev/null
+
+printf '[8/15] GNOME background metadata\n'
 ./scripts/generate-background-properties.py \
     --wallpaper-root /example/user/.local/share/backgrounds/NewBe \
     --check >/dev/null
 
-printf '[8/14] Installer dry-run\n'
+printf '[9/15] Installer dry-run\n'
 ./scripts/install.sh --dry-run >/dev/null
 
-printf '[9/14] Uninstaller dry-run\n'
+printf '[10/15] Uninstaller dry-run\n'
 ./scripts/uninstall.sh --dry-run >/dev/null
 
-printf '[10/14] Extension validation\n'
+printf '[11/15] Extension validation\n'
 ./scripts/verify-extension.sh >/dev/null
 
-printf '[11/14] Isolated install/uninstall\n'
+printf '[12/15] Isolated install/uninstall\n'
 ./scripts/test-install.sh >/dev/null
 
-printf '[12/14] Release archive\n'
+printf '[13/15] Release archive\n'
 ./scripts/build-release.py --check >/dev/null
 
-printf '[13/14] Extracted release install/uninstall\n'
+printf '[14/15] Extracted release install/uninstall\n'
 ./scripts/test-release.sh >/dev/null
 
-printf '[14/14] Git whitespace check\n'
+printf '[15/15] Git whitespace check\n'
 if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
     git diff --check
 else

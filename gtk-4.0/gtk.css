@@ -38,6 +38,7 @@
 @define-color newbe_gold #d6a928;
 @define-color newbe_gold_bright #e4be45;
 @define-color newbe_gold_dark #a77a12;
+@define-color newbe_link #79570b;
 
 @define-color newbe_bg #e8e6df;
 @define-color newbe_bg_secondary #d8d6cf;
@@ -200,7 +201,7 @@ entry:focus-within {
  * ========================================================= */
 
 *:focus-visible {
-    outline-color: @newbe_gold;
+    outline-color: @newbe_gold_dark;
     outline-width: 2px;
     outline-offset: 1px;
 }
@@ -210,7 +211,9 @@ button:focus-visible,
 checkbutton:focus-visible,
 switch:focus-visible,
 scale:focus-visible {
-    outline-color: @newbe_gold;
+    outline-color: @newbe_gold_dark;
+    outline-width: 2px;
+    outline-offset: 1px;
 }
 
 
@@ -435,11 +438,11 @@ notebook > header > tabs > tab:checked {
 
 link,
 link:visited {
-    color: @newbe_gold_dark;
+    color: @newbe_link;
 }
 
 link:hover {
-    color: @newbe_gold;
+    color: #6f4d06;
 }
 
 

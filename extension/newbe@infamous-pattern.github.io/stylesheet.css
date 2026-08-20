@@ -66,6 +66,12 @@
     background-color: #a77a12;
 }
 
+.newbe-panel-button:focus .newbe-panel-content {
+    box-shadow:
+        inset 0 0 0 2px #20211f,
+        0 1px 3px rgba(0, 0, 0, 0.32);
+}
+
 /* NewBe B mark */
 
 .newbe-panel-mark {
