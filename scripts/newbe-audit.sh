@@ -30,6 +30,9 @@ check "NewBe-Dark GTK3" \
 check "NewBe-Dark GTK4" \
     "$DATA_HOME/themes/NewBe-Dark/gtk-4.0/gtk.css"
 
+check "NewBe Shell theme" \
+    "$DATA_HOME/themes/NewBe/gnome-shell/gnome-shell.css"
+
 check "NewBe icons" \
     "$DATA_HOME/icons/NewBe/index.theme"
 
@@ -41,6 +44,9 @@ check "NewBe wallpapers" \
 
 check "GNOME wallpaper catalog" \
     "$DATA_HOME/gnome-background-properties/newbe.xml"
+
+check "NewBe Shell extension" \
+    "$DATA_HOME/gnome-shell/extensions/newbe@infamous-pattern.github.io/metadata.json"
 
 printf '\nSecurity posture\n'
 printf '%s\n' '----------------'

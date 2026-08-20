@@ -1,0 +1,30 @@
+# NewBe Licensing
+
+Copyright (c) 2026 NewBe contributors.
+
+NewBe uses a split license so its software and original visual artwork can be reused under terms appropriate to each kind of work.
+
+## MIT License
+
+The following are licensed under the MIT License in [LICENSES/MIT.txt](LICENSES/MIT.txt):
+
+- source code and executable scripts;
+- GNOME Shell extension code and schemas;
+- GTK and GNOME Shell CSS;
+- build, installation, audit, workflow, configuration, and documentation files;
+- generated theme files derived from the MIT-licensed CSS.
+
+This includes `.github/`, `extension/`, `gnome-shell/`, `gtk-3.0/`, `gtk-4.0/`, `scripts/`, `themes/`, and repository text/configuration files unless stated otherwise.
+
+## Creative Commons Attribution-ShareAlike 4.0 International
+
+The following original visual works are licensed under CC BY-SA 4.0 in [LICENSES/CC-BY-SA-4.0.txt](LICENSES/CC-BY-SA-4.0.txt):
+
+- `assets/wallpapers/`;
+- `cursors/` and compiled cursor artwork in `icons/NewBe/cursors/`;
+- icon artwork in `icons/NewBe/`;
+- preview artwork in `docs/images/`.
+
+Generated or resized versions remain under the same license as their source artwork.
+
+Application names, product names, and trademarks depicted or referenced by compatibility icons remain the property of their respective owners. The licenses above do not grant trademark rights.
