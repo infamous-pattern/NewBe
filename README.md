@@ -94,8 +94,17 @@ checks before installing:
 ./scripts/install.sh
 ```
 
-The installer requires Bash, Python 3, and `glib-compile-schemas`. It does not
-download dependencies or contact a network service.
+The default command includes the optional GNOME Shell extension. To install the
+themes, icons, cursors, and wallpapers without the extension, use:
+
+```bash
+./scripts/install.sh --without-extension
+```
+
+For automation, `--with-extension` selects the default behavior explicitly.
+The two extension options are mutually exclusive. The installer requires Bash
+and Python 3; `glib-compile-schemas` is required only when the extension is
+included. It does not download dependencies or contact a network service.
 
 ### What the installer does
 
@@ -109,12 +118,12 @@ operations:
 | Icons and cursors | `icons/NewBe` | Replaces the previous NewBe-owned icon directory and copies the complete icon and cursor theme. |
 | Wallpapers | `backgrounds/NewBe` | Copies the seven named 4K NewBe wallpapers. Unrelated files in this directory are preserved. |
 | Wallpaper catalog | `gnome-background-properties/newbe.xml` | Generates GNOME Background settings metadata for the installed wallpaper paths. |
-| Shell extension | `gnome-shell/extensions/newbe@infamous-pattern.github.io` | Replaces the previous NewBe extension directory, copies the extension, and compiles its local GSettings schema. |
+| Shell extension | `gnome-shell/extensions/newbe@infamous-pattern.github.io` | Included by default: replaces the previous NewBe extension directory, copies the extension, and compiles its local GSettings schema. `--without-extension` skips all extension writes and preserves any existing installed copy. |
 
-Because the three NewBe theme/icon directories and the NewBe extension
-directory are replaced, manually edited files inside an earlier NewBe install
-should be backed up first. The source checkout and unrelated user files are not
-removed.
+The three NewBe theme/icon directories are replaced on every install. The
+NewBe extension directory is replaced only when the extension is included.
+Manually edited files inside those destinations should be backed up first. The
+source checkout and unrelated user files are not removed.
 
 The installer does **not**:
 
