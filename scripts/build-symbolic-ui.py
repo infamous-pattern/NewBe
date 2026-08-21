@@ -118,13 +118,16 @@ ICONS = {
 
 
 def wireless(level: int) -> str:
-    arcs = ['<circle fill="currentColor" cx="8" cy="13" r="1.4"/>']
+    # Keep every wireless segment fill-only. GNOME Shell's symbolic recoloring
+    # can treat strokes and fills differently, which makes a single status icon
+    # appear in two colors.
+    arcs = ['<circle fill="currentColor" cx="8" cy="13.5" r="1.2"/>']
     if level >= 1:
-        arcs.append(stroked("M5.5 10.5a3.5 3.5 0 0 1 5 0", 1.7))
+        arcs.append(filled("M5.6 10.4C6.9 9.1 9.1 9.1 10.4 10.4L9 11.8c-.6-.6-1.4-.6-2 0z"))
     if level >= 2:
-        arcs.append(stroked("M3.4 8.2a6.5 6.5 0 0 1 9.2 0", 1.7))
+        arcs.append(filled("M3.2 8c2.7-2.7 6.9-2.7 9.6 0l-1.4 1.4c-1.9-1.9-4.9-1.9-6.8 0z"))
     if level >= 3:
-        arcs.append(stroked("M1.3 5.8a9.5 9.5 0 0 1 13.4 0", 1.7))
+        arcs.append(filled("M.8 5.6c4-4 10.4-4 14.4 0L13.8 7C10.6 3.8 5.4 3.8 2.2 7z"))
     return "".join(arcs)
 
 
@@ -137,7 +140,10 @@ WIRELESS_LEVELS = {
 }
 
 for name, level in WIRELESS_LEVELS.items():
-    ICONS[f"status/network-wireless-signal-{name}-symbolic.svg"] = wireless(level)
+    body = wireless(level)
+    if "stroke=" in body:
+        raise ValueError(f"wireless symbolic icon must be fill-only: {name}")
+    ICONS[f"status/network-wireless-signal-{name}-symbolic.svg"] = body
 
 
 def battery(level: int, charging: bool = False) -> str:
