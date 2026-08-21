@@ -14,16 +14,20 @@ EXTENSION_ROOT="${XDG_DATA_HOME:-$HOME/.local/share}/gnome-shell/extensions"
 EXTENSION_TARGET="$EXTENSION_ROOT/$EXTENSION_UUID"
 
 DRY_RUN=false
+INSTALL_EXTENSION=true
+EXTENSION_OPTION=""
 
 usage() {
     cat <<USAGE
-Usage: $0 [--dry-run]
+Usage: $0 [--dry-run] [--with-extension | --without-extension]
 
 Install NewBe into the current user's local GNOME data directories.
 
 Options:
-  --dry-run    Show planned operations without modifying files
-  -h, --help   Show this help
+  --dry-run             Show planned operations without modifying files
+  --with-extension      Install the GNOME Shell extension (default)
+  --without-extension   Skip the extension and preserve any installed copy
+  -h, --help            Show this help
 USAGE
 }
 
@@ -41,6 +45,22 @@ while (($#)); do
     case "$1" in
         --dry-run)
             DRY_RUN=true
+            ;;
+        --with-extension)
+            if [[ "$EXTENSION_OPTION" == "without" ]]; then
+                printf 'Conflicting extension options were provided.\n' >&2
+                exit 2
+            fi
+            INSTALL_EXTENSION=true
+            EXTENSION_OPTION="with"
+            ;;
+        --without-extension)
+            if [[ "$EXTENSION_OPTION" == "with" ]]; then
+                printf 'Conflicting extension options were provided.\n' >&2
+                exit 2
+            fi
+            INSTALL_EXTENSION=false
+            EXTENSION_OPTION="without"
             ;;
         -h|--help)
             usage
@@ -67,7 +87,9 @@ run mkdir -p "$THEME_ROOT"
 run mkdir -p "$ICON_ROOT"
 run mkdir -p "$WALLPAPER_ROOT"
 run mkdir -p "$BACKGROUND_PROPERTIES_ROOT"
-run mkdir -p "$EXTENSION_ROOT"
+if "$INSTALL_EXTENSION"; then
+    run mkdir -p "$EXTENSION_ROOT"
+fi
 
 run rm -rf -- "$THEME_ROOT/NewBe"
 run rm -rf -- "$THEME_ROOT/NewBe-Dark"
@@ -89,9 +111,11 @@ run "$PROJECT_ROOT/scripts/generate-background-properties.py" \
     --wallpaper-root "$WALLPAPER_ROOT" \
     --output "$BACKGROUND_PROPERTIES"
 
-run rm -rf -- "$EXTENSION_TARGET"
-run cp -R "$PROJECT_ROOT/extension/$EXTENSION_UUID" "$EXTENSION_ROOT/"
-run glib-compile-schemas --strict "$EXTENSION_TARGET/schemas"
+if "$INSTALL_EXTENSION"; then
+    run rm -rf -- "$EXTENSION_TARGET"
+    run cp -R "$PROJECT_ROOT/extension/$EXTENSION_UUID" "$EXTENSION_ROOT/"
+    run glib-compile-schemas --strict "$EXTENSION_TARGET/schemas"
+fi
 
 printf '\nNewBe installation complete.\n'
 printf 'No GNOME settings were modified automatically.\n'
@@ -103,4 +127,8 @@ printf '  NewBe\n'
 printf '\nWallpapers:\n'
 printf '  Seven NewBe wallpapers are available in GNOME Background settings.\n'
 printf '\nGNOME Shell extension:\n'
-printf '  Installed but not enabled automatically: %s\n' "$EXTENSION_UUID"
+if "$INSTALL_EXTENSION"; then
+    printf '  Installed but not enabled automatically: %s\n' "$EXTENSION_UUID"
+else
+    printf '  Skipped; any existing installed copy was left unchanged.\n'
+fi

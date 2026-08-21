@@ -45,6 +45,16 @@ PACKAGE_ROOT="$EXTRACT_ROOT/NewBe-$VERSION"
 test -x "$PACKAGE_ROOT/scripts/install.sh"
 test -x "$PACKAGE_ROOT/scripts/uninstall.sh"
 
+XDG_DATA_HOME="$DATA_ROOT" \
+    "$PACKAGE_ROOT/scripts/install.sh" --without-extension >/dev/null
+
+test -f "$DATA_ROOT/themes/NewBe/gnome-shell/gnome-shell.css"
+test -f "$DATA_ROOT/icons/NewBe/cursors/left_ptr"
+test -f "$DATA_ROOT/gnome-background-properties/newbe.xml"
+test ! -e "$DATA_ROOT/gnome-shell/extensions/newbe@infamous-pattern.github.io"
+
+XDG_DATA_HOME="$DATA_ROOT" "$PACKAGE_ROOT/scripts/uninstall.sh" >/dev/null
+
 XDG_DATA_HOME="$DATA_ROOT" "$PACKAGE_ROOT/scripts/install.sh" >/dev/null
 
 test -f "$DATA_ROOT/themes/NewBe/gnome-shell/gnome-shell.css"
