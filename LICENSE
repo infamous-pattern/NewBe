@@ -23,7 +23,8 @@ The following original visual works are licensed under CC BY-SA 4.0 in [LICENSES
 - `assets/wallpapers/`;
 - `cursors/` and compiled cursor artwork in `icons/NewBe/cursors/`;
 - icon artwork in `icons/NewBe/`;
-- preview artwork in `docs/images/`.
+- preview artwork and live desktop screenshots in `docs/images/` and
+  `docs/screenshots/`.
 
 Generated or resized versions remain under the same license as their source artwork.
 

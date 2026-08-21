@@ -6,7 +6,27 @@ NewBe is designed primarily for Fedora Workstation and modern GNOME, while remai
 
 ## Preview
 
-Current development previews use NewBe's repository-owned artwork and SVG assets.
+The design galleries use NewBe's repository-owned artwork and SVG assets. Live
+desktop screenshots also depict GNOME Shell and installed third-party
+applications; their names and trademarks remain the property of their
+respective owners.
+
+### NewBe on GNOME
+
+[![NewBe desktop running on GNOME](docs/images/newbe-desktop.png)](docs/screenshots/newbe-desktop-1920x1200.png)
+
+The live test desktop shows the NewBe wallpaper, GNOME panel, dock, and installed
+application icons together. Select any screenshot to open its full-resolution
+1920×1200 version.
+
+[![NewBe application overview, first page](docs/images/newbe-applications-page-1.png)](docs/screenshots/newbe-applications-page-1-1920x1200.png)
+
+[![NewBe application overview, second page](docs/images/newbe-applications-page-2.png)](docs/screenshots/newbe-applications-page-2-1920x1200.png)
+
+The optional extension preferences provide panel-indicator visibility and the
+stored NewBe motion-profile selection:
+
+[![NewBe extension preferences](docs/images/newbe-extension-preferences.png)](docs/screenshots/newbe-extension-preferences-652x581.png)
 
 ### Glass Horizon wallpaper
 
@@ -58,32 +78,111 @@ The NewBe cursor theme includes 15 original designs, four HiDPI sizes, and stand
 
 ## Installation
 
-Download and extract the release archive, then run:
-
-```bash
-./scripts/verify.sh
-./scripts/install.sh
-```
-
-Each archive is published with a `.sha256` file. Verify both files from the same directory before extraction:
+Download both the release archive and its `.sha256` file into the same
+directory. Verify the archive before extracting it:
 
 ```bash
 sha256sum --check NewBe-0.1.0-alpha.2.tar.gz.sha256
 ```
 
-Installation is user-scoped and does not require root. It installs the GTK and Shell themes, icon and cursor theme, seven wallpapers, and the NewBe GNOME Shell extension. It does not change or enable any GNOME setting automatically.
+After extraction, inspect the planned user-scoped changes and run the project
+checks before installing:
 
-After installation, use GNOME Tweaks to select NewBe components. The extension can be enabled explicitly with:
+```bash
+./scripts/install.sh --dry-run
+./scripts/verify.sh
+./scripts/install.sh
+```
+
+The installer requires Bash, Python 3, and `glib-compile-schemas`. It does not
+download dependencies or contact a network service.
+
+### What the installer does
+
+`scripts/install.sh` installs only for the current user, using
+`${XDG_DATA_HOME:-$HOME/.local/share}` as its data root. It performs these
+operations:
+
+| Component | User-scoped destination | Installer behavior |
+| --- | --- | --- |
+| GTK and Shell themes | `themes/NewBe` and `themes/NewBe-Dark` | Rebuilds the theme output, replaces previous NewBe-owned theme directories, and copies the current files. |
+| Icons and cursors | `icons/NewBe` | Replaces the previous NewBe-owned icon directory and copies the complete icon and cursor theme. |
+| Wallpapers | `backgrounds/NewBe` | Copies the seven named 4K NewBe wallpapers. Unrelated files in this directory are preserved. |
+| Wallpaper catalog | `gnome-background-properties/newbe.xml` | Generates GNOME Background settings metadata for the installed wallpaper paths. |
+| Shell extension | `gnome-shell/extensions/newbe@infamous-pattern.github.io` | Replaces the previous NewBe extension directory, copies the extension, and compiles its local GSettings schema. |
+
+Because the three NewBe theme/icon directories and the NewBe extension
+directory are replaced, manually edited files inside an earlier NewBe install
+should be backed up first. The source checkout and unrelated user files are not
+removed.
+
+The installer does **not**:
+
+- require `sudo`, write under `/usr`, or modify system files;
+- change the active GTK, Shell, icon, cursor, font, or wallpaper settings;
+- enable the extension or install GNOME's User Themes extension;
+- restart GNOME Shell or the current session; or
+- collect telemetry, run downloaded code, or make network requests.
+
+After installation, select the desired NewBe components with GNOME Tweaks.
+Selecting a custom GNOME Shell theme also requires a compatible Shell-theme
+loader such as GNOME's User Themes extension.
+
+To confirm that all expected user files are present, run:
+
+```bash
+./scripts/newbe-audit.sh
+```
+
+### What the NewBe extension does
+
+The optional extension is separate from the GTK, icon, cursor, wallpaper, and
+Shell themes. Enabling it adds a styled **B / NewBe** indicator to the left side
+of the GNOME top panel. Its menu reports the current light or dark appearance,
+shows the selected NewBe motion profile, and opens the extension preferences.
+
+The preferences currently provide two NewBe-owned settings:
+
+- **Show NewBe panel label** shows or hides the complete panel indicator.
+- **Motion profile** stores one of Reduced, Standard, or Fluid and displays that
+  choice in the indicator menu.
+
+At this development stage, the motion profile is descriptive extension state;
+it does not change Mutter, global GNOME animations, animation timing, or other
+desktop settings. The extension observes GNOME Shell's existing light/dark
+color scheme only to style its own indicator and update the appearance label.
+
+The extension does not replace system UI components, modify files, launch
+processes, access the network, or change global GNOME settings. Disabling it
+removes the indicator and disconnects its Shell event handlers; its two local
+preferences remain available for the next time it is enabled.
+
+Enable and configure it explicitly with:
 
 ```bash
 gnome-extensions enable newbe@infamous-pattern.github.io
+gnome-extensions prefs newbe@infamous-pattern.github.io
 ```
 
-To remove all NewBe-owned user files without changing GNOME settings:
+The extension metadata currently declares compatibility with GNOME Shell
+48–50. See [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md) for the tested-support
+matrix.
+
+### Uninstall and rollback
+
+Disable the extension first, then remove the NewBe-owned user files:
 
 ```bash
+gnome-extensions disable newbe@infamous-pattern.github.io
+./scripts/uninstall.sh --dry-run
 ./scripts/uninstall.sh
 ```
+
+The uninstaller removes the installed NewBe/NewBe-Dark themes, NewBe icon and
+cursor theme, extension directory, seven named wallpaper files, and NewBe
+wallpaper catalog. It preserves unrelated files and does not change GNOME
+settings, including the active theme selections and extension enablement state.
+Select non-NewBe components before uninstalling if they are currently active.
 
 ## Typography
 
