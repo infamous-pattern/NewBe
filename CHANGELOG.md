@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.1.0 — 2026-08-25
+
+First public release of the NewBe desktop experience.
+
+- Wayland-first reference platform: Fedora Workstation 44 with GNOME Shell 50
+- Light and dark GTK 3/GTK 4 themes plus GNOME Shell styling
+- NewBe icon theme with 100% native coverage of the defined 83-name core baseline across applications, places, devices, and symbolic UI
+- Fifteen-design NewBe cursor theme with four HiDPI sizes and standard compatibility aliases
+- Seven original wallpapers, multi-resolution exports, checksums, and GNOME Background integration with a light/dark hero pairing
+- Optional GNOME Shell extension installation, with package validation for GNOME Shell 48–50 on Fedora 42–44
+- User-local installer and uninstaller with dry-run modes, explicit audit tooling, and no automatic GNOME settings changes
+- Reproducible release archives with SHA-256 checksums, internal file manifests, and clean-room extracted-archive install/uninstall validation
+- Automated accessibility, icon, cursor, wallpaper, metadata, extension, security, and compatibility checks
+- Documented libadwaita theming limitations and split MIT/CC BY-SA 4.0 licensing with artwork provenance
+
 ## 0.1.0-alpha.2 — 2026-08-19
 
 Release-stabilization preview.

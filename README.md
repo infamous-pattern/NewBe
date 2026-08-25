@@ -4,6 +4,9 @@
 
 NewBe is designed primarily for Fedora Workstation and modern GNOME, while remaining as portable as practical across current GNOME-based Linux distributions.
 
+The `0.1.0` reference platform is Fedora Workstation 44 with GNOME Shell 50 on
+Wayland.
+
 ## Preview
 
 The design galleries use NewBe's repository-owned artwork and SVG assets. Live
@@ -72,7 +75,12 @@ stored NewBe motion-profile selection:
 - NewBe cursor theme
 - NewBe wallpaper collection
 - NewBe GNOME Shell extension
-- Installation and audit tools
+- User-local installation, uninstallation, audit, and verification tools
+
+The NewBe icon theme has 100% native coverage of its defined 83-name core
+baseline: 46 applications, 13 places, 11 devices, and 13 symbolic UI icons.
+Unrecognized applications continue through the standard Adwaita, hicolor, and
+application-provided fallback chain.
 
 The NewBe cursor theme includes 15 original designs, four HiDPI sizes, and standard compatibility aliases. Its editable vector sources and reproducible build details are documented in [cursors/README.md](cursors/README.md).
 
@@ -82,7 +90,7 @@ Download both the release archive and its `.sha256` file into the same
 directory. Verify the archive before extracting it:
 
 ```bash
-sha256sum --check NewBe-0.1.0-alpha.2.tar.gz.sha256
+sha256sum --check NewBe-0.1.0.tar.gz.sha256
 ```
 
 After extraction, inspect the planned user-scoped changes and run the project
@@ -143,6 +151,26 @@ To confirm that all expected user files are present, run:
 ./scripts/newbe-audit.sh
 ```
 
+### Verification and release validation
+
+`scripts/verify.sh` is the complete local verification entry point. It checks
+Bash and ShellCheck results, generated assets, icon and cursor coverage,
+wallpaper integrity, accessibility rules, GNOME background metadata, installer
+and uninstaller dry runs, extension packaging, isolated installation,
+release-metadata consistency, release-archive reproducibility, and Git
+whitespace.
+
+The release test builds the versioned archive and checksum, extracts the
+archive into a temporary clean-room directory, verifies its structure, and
+tests user-local installation and uninstallation both with and without the
+optional extension. No test writes to the user's normal GNOME data directories.
+
+Run the full suite with:
+
+```bash
+./scripts/verify.sh
+```
+
 ### What the NewBe extension does
 
 The optional extension is separate from the GTK, icon, cursor, wallpaper, and
@@ -156,10 +184,10 @@ The preferences currently provide two NewBe-owned settings:
 - **Motion profile** stores one of Reduced, Standard, or Fluid and displays that
   choice in the indicator menu.
 
-At this development stage, the motion profile is descriptive extension state;
-it does not change Mutter, global GNOME animations, animation timing, or other
-desktop settings. The extension observes GNOME Shell's existing light/dark
-color scheme only to style its own indicator and update the appearance label.
+The motion profile is descriptive extension state; it does not change Mutter,
+global GNOME animations, animation timing, or other desktop settings. The
+extension observes GNOME Shell's existing light/dark color scheme only to style
+its own indicator and update the appearance label.
 
 The extension does not replace system UI components, modify files, launch
 processes, access the network, or change global GNOME settings. Disabling it
@@ -176,6 +204,18 @@ gnome-extensions prefs newbe@infamous-pattern.github.io
 The extension metadata currently declares compatibility with GNOME Shell
 48–50. See [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md) for the tested-support
 matrix.
+
+## Known limitations
+
+- GNOME's libadwaita applications do not support arbitrary system-wide GTK
+  stylesheet themes. NewBe's GTK 4 theme applies to applications that honor the
+  selected GTK theme, but many libadwaita applications will retain their
+  upstream Adwaita styling. NewBe icons, cursors, wallpapers, Shell theme, and
+  optional extension remain independent of that limitation.
+- The optional extension's motion profile is descriptive NewBe-owned state; it
+  does not alter Mutter or global GNOME animation timing.
+- GNOME Shell styling depends on upstream Shell internals and may need updates
+  for Shell versions outside the declared 48–50 compatibility range.
 
 ### Uninstall and rollback
 
@@ -236,9 +276,11 @@ Target resolutions:
 
 ## Security
 
-NewBe installation scripts are intended to be readable, auditable, and reversible.
+NewBe installation scripts are designed to be readable, auditable, and
+reversible. Both installation and uninstallation support dry-run inspection,
+and the installed state can be checked explicitly with `newbe-audit.sh`.
 
-The project will use automated security and quality checks including:
+The project runs automated security and quality checks including:
 
 - ShellCheck
 - CodeQL
@@ -254,7 +296,8 @@ matrix are documented in [docs/ACCESSIBILITY.md](docs/ACCESSIBILITY.md).
 
 ## Status
 
-NewBe is currently in early development.
+The current source tree is prepared as the NewBe `0.1.0` final release
+candidate. No final Git tag or GitHub release is implied by this status.
 
 The primary target platform is Fedora Workstation 44 running GNOME 50 on
 Wayland. The Shell extension is also package-validated for GNOME 48 and 49 on
