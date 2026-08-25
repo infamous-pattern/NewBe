@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5f5f2"/>
+      <stop offset=".48" stop-color="#bfc1bc"/>
+      <stop offset="1" stop-color="#747772"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dce8ec"/>
+      <stop offset=".55" stop-color="#93a9b0"/>
+      <stop offset="1" stop-color="#566268"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-opacity=".27"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <path d="M56 54h144l23 110H33z"
+          fill="url(#metal)" stroke="#555752" stroke-width="5"/>
+
+    <path d="M72 70h112l16 76H56z"
+          fill="url(#glass)" stroke="#666863" stroke-width="4"/>
+
+    <path d="M48 164h160c10 0 18 8 18 18v28c0 10-8 18-18 18H48c-10 0-18-8-18-18v-28c0-10 8-18 18-18z"
+          fill="url(#metal)" stroke="#555752" stroke-width="5"/>
+
+    <rect x="56" y="178" width="98" height="12" rx="6"
+          fill="#30322f"/>
+
+    <circle cx="190" cy="194" r="10"
+            fill="#d6a928" stroke="#79570b" stroke-width="3"/>
+
+    <circle cx="190" cy="194" r="4" fill="#fff0a0"/>
+
+    <path d="M76 88h96"
+          stroke="#f3cf62" stroke-width="5" opacity=".65"/>
+  </g>
+</svg>

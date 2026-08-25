@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f6f3"/>
+      <stop offset=".45" stop-color="#bfc1bc"/>
+      <stop offset="1" stop-color="#777a75"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e4be45"/>
+      <stop offset="1" stop-color="#a77a12"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-opacity=".27"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="61" y="27" width="134" height="87" rx="8"
+          fill="#fffef8" stroke="#777a75" stroke-width="5"/>
+
+    <path d="M50 88h156c12 0 21 9 21 21v77c0 12-9 21-21 21H50c-12 0-21-9-21-21v-77c0-12 9-21 21-21z"
+          fill="url(#metal)" stroke="#555752" stroke-width="5"/>
+
+    <rect x="68" y="143" width="120" height="88" rx="7"
+          fill="#fffef8" stroke="#777a75" stroke-width="4"/>
+
+    <rect x="166" y="105" width="34" height="20" rx="6"
+          fill="url(#gold)" stroke="#79570b" stroke-width="3"/>
+
+    <circle cx="183" cy="115" r="4" fill="#fff3af"/>
+
+    <path d="M83 164h90M83 181h90M83 198h68"
+          stroke="#8e908a" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

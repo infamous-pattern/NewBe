@@ -35,6 +35,12 @@ icons=(
     "$PROJECT_ROOT/icons/NewBe/scalable/devices/drive-harddisk.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/devices/drive-removable-media.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/devices/computer.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/devices/media-flash.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/devices/media-optical.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/devices/printer.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/devices/scanner.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/devices/camera-photo.svg"
+    "$PROJECT_ROOT/icons/NewBe/scalable/devices/audio-card.svg"
 
     "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Nautilus.svg"
     "$PROJECT_ROOT/icons/NewBe/scalable/apps/org.gnome.Calculator.svg"

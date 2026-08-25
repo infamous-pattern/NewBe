@@ -1,0 +1,13 @@
+folder
+folder-documents
+folder-download
+folder-music
+folder-pictures
+folder-videos
+folder-network
+user-home
+user-desktop
+trash-empty
+trash-full
+network-server
+network-workgroup

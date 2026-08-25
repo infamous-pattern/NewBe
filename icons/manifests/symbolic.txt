@@ -1,0 +1,13 @@
+folder-symbolic
+folder-documents-symbolic
+folder-download-symbolic
+folder-music-symbolic
+folder-pictures-symbolic
+folder-videos-symbolic
+folder-network-symbolic
+user-home-symbolic
+user-trash-symbolic
+network-server-symbolic
+network-workgroup-symbolic
+computer-symbolic
+drive-harddisk-symbolic

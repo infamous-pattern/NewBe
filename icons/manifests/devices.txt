@@ -1,0 +1,11 @@
+computer
+computer-desktop
+drive-harddisk
+drive-fixed
+drive-removable-media
+media-flash
+media-optical
+printer
+scanner
+camera-photo
+audio-card
