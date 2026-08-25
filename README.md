@@ -9,18 +9,21 @@ Wayland.
 
 ## Preview
 
-The design galleries use NewBe's repository-owned artwork and SVG assets. Live
-desktop screenshots also depict GNOME Shell and installed third-party
-applications; their names and trademarks remain the property of their
-respective owners.
+The icon galleries below are generated from the current repository-owned NewBe
+SVG sources. The live desktop and application-overview screenshots are captured
+from the Fedora Workstation 44 / GNOME 50 Wayland reference system and also
+depict GNOME Shell and installed third-party applications; their names and
+trademarks remain the property of their respective owners.
 
-### NewBe on GNOME
+### Reference desktop
 
 [![NewBe desktop running on GNOME](docs/images/newbe-desktop.png)](docs/screenshots/newbe-desktop-1920x1200.png)
 
-The live test desktop shows the NewBe wallpaper, GNOME panel, dock, and installed
-application icons together. Select any screenshot to open its full-resolution
-1920×1200 version.
+The live reference desktop shows the NewBe wallpaper, GNOME panel, dock, and
+installed application icons together. Select any screenshot to open its
+full-resolution 1920×1200 version.
+
+### Application overview
 
 [![NewBe application overview, first page](docs/images/newbe-applications-page-1.png)](docs/screenshots/newbe-applications-page-1-1920x1200.png)
 
@@ -35,11 +38,11 @@ stored NewBe motion-profile selection:
 
 ![NewBe Glass Horizon wallpaper](docs/images/glass-horizon.png)
 
-### Application icons
+### Current application icons
 
 ![NewBe application icons](docs/images/application-icons.png)
 
-### Places and devices
+### Current places and device icons
 
 ![NewBe folder, place, and device icons](docs/images/places-and-devices.png)
 
