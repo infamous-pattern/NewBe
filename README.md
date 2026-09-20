@@ -52,7 +52,7 @@ stored NewBe motion-profile selection:
 
 ### Cursor theme
 
-![NewBe cursor theme](docs/images/cursors.png)
+![NewBe cursor theme, including the refined pointer, open-hand, and grabbing cursors](docs/images/cursors.png)
 
 ## Design goals
 
